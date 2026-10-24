@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skill": "harness",
+  "references": [
+    {
+      "id": "change-ownership",
+      "title": "Change Ownership",
+      "path": "guides/change-ownership.md",
+      "when_to_read": "Read when deciding where a change belongs, how much code to touch, or whether an abstraction is justified."
+    },
+    {
+      "id": "task-boundaries",
+      "title": "Task Boundaries",
+      "path": "guides/task-boundaries.md",
+      "when_to_read": "Read when scope, authorization, or acceptance criteria need to be established. A working contract should make the next action clear without creating unnecessary planning documents."
+    },
+    {
+      "id": "verification-and-delivery",
+      "title": "Verification and Delivery",
+      "path": "guides/verification-and-delivery.md",
+      "when_to_read": "Read when selecting checks, diagnosing failures, or deciding whether work is complete."
+    }
+  ]
+}
