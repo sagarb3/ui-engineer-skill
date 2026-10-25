@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skill": "trim-mode",
+  "references": [
+    {
+      "id": "completeness-and-risk",
+      "title": "Completeness and Risk",
+      "path": "guides/completeness-and-risk.md",
+      "when_to_read": "Read when a smaller implementation or shorter response might omit behavior, safeguards, or evidence."
+    },
+    {
+      "id": "implementation-decisions",
+      "title": "Implementation Decisions",
+      "path": "guides/implementation-decisions.md",
+      "when_to_read": "Read when applying the trimming ladder to a concrete feature or bug. Minimal means the smallest complete solution, not the fewest visible lines."
+    },
+    {
+      "id": "response-patterns",
+      "title": "Response Patterns",
+      "path": "guides/response-patterns.md",
+      "when_to_read": "Read when shaping replies in trim mode. These rules affect presentation; they do not reduce investigation, accepted requirements, or evidence."
+    }
+  ]
+}
