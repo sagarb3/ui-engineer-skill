@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness"
+  short_description: "Small complete changes with clear task boundaries"
+  default_prompt: "Use $harness to handle the requested task using project conventions and relevant verification."

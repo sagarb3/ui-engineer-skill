@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skill": "git-tooling",
+  "references": [
+    {
+      "id": "branches-and-remotes",
+      "title": "Branches and Remotes",
+      "path": "guides/branches-and-remotes.md",
+      "when_to_read": "Read when branch identity, worktrees, upstreams, pulls, or push destinations need resolution."
+    },
+    {
+      "id": "conflicts-and-history",
+      "title": "Conflicts and History",
+      "path": "guides/conflicts-and-history.md",
+      "when_to_read": "Read for merge conflicts, rebase or amendment requests, destructive cleanup, and failed history updates."
+    },
+    {
+      "id": "index-and-commits",
+      "title": "Index and Commits",
+      "path": "guides/index-and-commits.md",
+      "when_to_read": "Read for staging, selective commits, pre-existing index content, and hook failures. A simple status request still needs only the requested command."
+    }
+  ]
+}
