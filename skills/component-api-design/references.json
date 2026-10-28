@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skill": "component-api-design",
+  "references": [
+    {
+      "id": "compatibility-and-consumer-tests",
+      "title": "Compatibility and Consumer Tests",
+      "path": "guides/compatibility-and-consumer-tests.md",
+      "when_to_read": "Read before changing defaults, renaming props, moving exports, altering callback shapes, or adding a migration adapter."
+    },
+    {
+      "id": "composition-and-native-behavior",
+      "title": "Composition and Native Behavior",
+      "path": "guides/composition-and-native-behavior.md",
+      "when_to_read": "Read when adding children, slots, polymorphism, native attributes, event composition, or refs."
+    },
+    {
+      "id": "contracts-and-ownership",
+      "title": "Contracts and Ownership",
+      "path": "guides/contracts-and-ownership.md",
+      "when_to_read": "Read when designing props, callbacks, state modes, defaults, and valid combinations."
+    }
+  ]
+}
