@@ -1,0 +1,4 @@
+interface:
+  display_name: "Component API Design"
+  short_description: "Clear component contracts and compatible consumers"
+  default_prompt: "Use $component-api-design to handle the requested task using project conventions and relevant verification."
