@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vitest React Testing"
+  short_description: "Behavior-focused React tests with real boundaries"
+  default_prompt: "Use $vitest-react-testing to handle the requested task using project conventions and relevant verification."

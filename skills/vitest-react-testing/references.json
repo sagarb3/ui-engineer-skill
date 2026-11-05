@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skill": "vitest-react-testing",
+  "references": [
+    {
+      "id": "async-and-mocks",
+      "title": "Async and Mocks",
+      "path": "guides/async-and-mocks.md",
+      "when_to_read": "Read when testing pending states, timers, requests, retry, cancellation, or stale results."
+    },
+    {
+      "id": "project-setup-and-execution",
+      "title": "Project Setup and Execution",
+      "path": "guides/project-setup-and-execution.md",
+      "when_to_read": "Read before adding or running tests in an unfamiliar React project, or when a test fails before reaching its assertions."
+    },
+    {
+      "id": "scenario-design",
+      "title": "Scenario Design",
+      "path": "guides/scenario-design.md",
+      "when_to_read": "Read when choosing test cases, queries, assertions, and regression coverage."
+    }
+  ]
+}
