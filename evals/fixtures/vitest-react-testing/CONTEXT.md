@@ -1,0 +1,1 @@
+Source-only fixture. The intended stack is React, Vitest, React Testing Library, and user-event. Dependencies are not provisioned. Do not download packages or claim unexecuted checks passed. An evaluator may supply an installed toolchain explicitly.

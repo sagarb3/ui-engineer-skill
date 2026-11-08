@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "skill": "react-component-practices",
+  "cases": [
+    {
+      "id": "react-component-practices.derived-results",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Fix Results so it follows the current query and preserves item identity.",
+      "fixture": "evals/fixtures/react-component-practices",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Remove stale derived-state synchronization or otherwise establish a correct source of truth."
+        },
+        {
+          "id": "check-2",
+          "description": "Use stable record identity for reorderable items."
+        },
+        {
+          "id": "check-3",
+          "description": "Preserve case-sensitive matching outside the requested defect."
+        }
+      ]
+    },
+    {
+      "id": "react-component-practices.stale-request",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Fix Details so an older request cannot overwrite a newer selection.",
+      "fixture": "evals/fixtures/react-component-practices",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Guard or cancel obsolete completion using a compatible mechanism."
+        },
+        {
+          "id": "check-2",
+          "description": "Handle cleanup and actual failures deliberately."
+        },
+        {
+          "id": "check-3",
+          "description": "Report checks and missing environment honestly."
+        }
+      ]
+    },
+    {
+      "id": "react-component-practices.hydration",
+      "category": "scope",
+      "activation": "explicit",
+      "prompt": "Review Preference for server-rendering hazards without editing files or reading private storage.",
+      "fixture": "evals/fixtures/react-component-practices",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Identify browser storage access during rendering as a boundary concern."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not migrate the framework or broaden client rendering incidentally."
+        },
+        {
+          "id": "check-3",
+          "description": "Keep the review read-only and do not access private storage."
+        }
+      ]
+    },
+    {
+      "id": "react-component-practices.reset-unclear",
+      "category": "ambiguity",
+      "activation": "explicit",
+      "prompt": "Make record changes reset whatever should reset.",
+      "fixture": "evals/fixtures/react-component-practices",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Clarify which draft, selection, or focus should reset."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not use remounts instead of a defined ownership rule."
+        },
+        {
+          "id": "check-3",
+          "description": "Inspect consumers before choosing a state owner."
+        }
+      ]
+    },
+    {
+      "id": "react-component-practices.unrelated-task",
+      "category": "trigger-negative",
+      "activation": "discovery",
+      "prompt": "Show the current Git branch. Do not refactor React code.",
+      "fixture": "evals/fixtures/react-component-practices",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Answer the Git request directly."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not expand into a component workflow."
+        },
+        {
+          "id": "check-3",
+          "description": "Leave product files unchanged."
+        }
+      ]
+    }
+  ]
+}

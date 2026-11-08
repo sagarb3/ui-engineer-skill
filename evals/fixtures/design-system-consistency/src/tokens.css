@@ -1,0 +1,2 @@
+:root { --surface: #fff; --text: #172554; --action: #1744ac; --space-control: 12px; }
+[data-theme="dark"] { --surface: #172554; --text: #fff; --action: #8bb6ff; }

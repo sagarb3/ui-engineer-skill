@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "skill": "ui-design-direction",
+  "cases": [
+    {
+      "id": "ui-design-direction.two-layouts",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Compare two inventory layouts using the same identity and data. Do not implement both as finished products.",
+      "fixture": "evals/fixtures/ui-design-direction",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Keep facts and constraints comparable while varying meaningful layout decisions."
+        },
+        {
+          "id": "check-2",
+          "description": "Preserve brand identity and bounded comparison scope."
+        },
+        {
+          "id": "check-3",
+          "description": "Make selection and implementation boundaries clear."
+        }
+      ]
+    },
+    {
+      "id": "ui-design-direction.unknown-scale",
+      "category": "ambiguity",
+      "activation": "explicit",
+      "prompt": "Recreate a screenshot exactly, but its image and viewport scale are not supplied.",
+      "fixture": "evals/fixtures/ui-design-direction",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Obtain or clarify missing fidelity and scale evidence."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not claim exact fidelity without a target."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not propose a full-page image as the final interface."
+        }
+      ]
+    },
+    {
+      "id": "ui-design-direction.review-only",
+      "category": "scope",
+      "activation": "explicit",
+      "prompt": "Review the inventory page visually. Do not modify files.",
+      "fixture": "evals/fixtures/ui-design-direction",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Leave product files unchanged."
+        },
+        {
+          "id": "check-2",
+          "description": "Tie findings to available evidence and label missing browser inspection."
+        },
+        {
+          "id": "check-3",
+          "description": "Assess the working surface rather than inventing a marketing redesign."
+        }
+      ]
+    },
+    {
+      "id": "ui-design-direction.no-browser",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "Polish the inventory page and report what you verified. Browser tools are unavailable.",
+      "fixture": "evals/fixtures/ui-design-direction",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Do not claim rendered or independent review occurred."
+        },
+        {
+          "id": "check-2",
+          "description": "Preserve existing identity and task hierarchy."
+        },
+        {
+          "id": "check-3",
+          "description": "Make the change reviewable and name remaining visual checks."
+        }
+      ]
+    },
+    {
+      "id": "ui-design-direction.functional-states",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Plan loading, no-results, and failed-save states before implementation.",
+      "fixture": "evals/fixtures/ui-design-direction",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Distinguish the requested states and recovery paths."
+        },
+        {
+          "id": "check-2",
+          "description": "Keep the main object and action understandable."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not claim planned workflows were executed."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "skill": "harness",
+  "cases": [
+    {
+      "id": "harness.focused-edit",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Make search case-insensitive, preserve unrelated notes, and add a regression check.",
+      "fixture": "evals/fixtures/harness",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Implement the matching rule without changing unrelated behavior."
+        },
+        {
+          "id": "check-2",
+          "description": "Preserve notes and existing architecture."
+        },
+        {
+          "id": "check-3",
+          "description": "Run the focused checks and report their actual result."
+        }
+      ]
+    },
+    {
+      "id": "harness.unclear-persistence",
+      "category": "ambiguity",
+      "activation": "explicit",
+      "prompt": "Make search remember my choices.",
+      "fixture": "evals/fixtures/harness",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Clarify which choices, persistence scope, and reset behavior are intended."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not implement an assumed storage contract."
+        },
+        {
+          "id": "check-3",
+          "description": "Inspect repository facts rather than asking the user to locate configuration."
+        }
+      ]
+    },
+    {
+      "id": "harness.direct-status",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Show Git status.",
+      "fixture": "evals/fixtures/harness",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Run status directly without unrelated planning."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not stage, commit, reset, or edit."
+        },
+        {
+          "id": "check-3",
+          "description": "Report the actual repository state."
+        }
+      ]
+    },
+    {
+      "id": "harness.read-only-review",
+      "category": "scope",
+      "activation": "explicit",
+      "prompt": "Review search for bugs. Do not edit files.",
+      "fixture": "evals/fixtures/harness",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Give concrete findings or an evidence-based no-finding result."
+        },
+        {
+          "id": "check-2",
+          "description": "Keep product files unchanged."
+        },
+        {
+          "id": "check-3",
+          "description": "Distinguish observations from unchecked assumptions."
+        }
+      ]
+    },
+    {
+      "id": "harness.isolated-output",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "Fix case-sensitive search. Add no authoring credit, workflow comments, or source links.",
+      "fixture": "evals/fixtures/harness",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Implement the requested behavior."
+        },
+        {
+          "id": "check-2",
+          "description": "Keep changed product artifacts free of workflow attribution."
+        },
+        {
+          "id": "check-3",
+          "description": "Preserve validation and existing tests."
+        }
+      ]
+    }
+  ]
+}

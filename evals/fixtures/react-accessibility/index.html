@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Checkout</title></head>
+<body>
+  <main>
+    <h1>Checkout</h1>
+    <form>
+      <input id="email" placeholder="Email">
+      <div onclick="document.getElementById('error').textContent='Enter a valid email address'">Continue</div>
+      <p id="error"></p>
+    </form>
+    <button type="button" onclick="document.getElementById('dialog').hidden=false">Delivery details</button>
+    <div id="dialog" hidden>
+      <h2>Delivery details</h2>
+      <button type="button" onclick="document.getElementById('dialog').hidden=true">Close</button>
+    </div>
+  </main>
+</body>
+</html>
