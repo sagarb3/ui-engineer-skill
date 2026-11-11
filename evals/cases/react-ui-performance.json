@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "skill": "react-ui-performance",
+  "cases": [
+    {
+      "id": "react-ui-performance.trace-led",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Investigate slow filtering using the synthetic trace and make the narrowest justified correction.",
+      "fixture": "evals/fixtures/react-ui-performance",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Use the supplied computation evidence rather than guessing a network issue."
+        },
+        {
+          "id": "check-2",
+          "description": "Preserve caller-owned data and matching behavior."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not claim new measured gains from the fixture trace alone."
+        }
+      ]
+    },
+    {
+      "id": "react-ui-performance.blanket-memo",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "Make this fast by memoizing every component and callback.",
+      "fixture": "evals/fixtures/react-ui-performance",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Question unsupported blanket optimization and inspect actual cost."
+        },
+        {
+          "id": "check-2",
+          "description": "Prefer a justified local correction over speculative migration."
+        },
+        {
+          "id": "check-3",
+          "description": "Preserve dependencies and avoid stale closures."
+        }
+      ]
+    },
+    {
+      "id": "react-ui-performance.missing-goal",
+      "category": "ambiguity",
+      "activation": "explicit",
+      "prompt": "Make this page much faster.",
+      "fixture": "evals/fixtures/react-ui-performance",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Clarify the slow action, workload, and success target."
+        },
+        {
+          "id": "check-2",
+          "description": "Seek a baseline before claiming improvement."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not invent scores or performance targets."
+        }
+      ]
+    },
+    {
+      "id": "react-ui-performance.request-latency",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "The actual delay is a sequential network waterfall, not rendering. Explain the next investigation.",
+      "fixture": "evals/fixtures/react-ui-performance",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Investigate request dependencies and existing loaders or caches."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not present memoization as a network-latency fix."
+        },
+        {
+          "id": "check-3",
+          "description": "Preserve freshness, authorization, and recovery."
+        }
+      ]
+    },
+    {
+      "id": "react-ui-performance.no-profiler",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "Optimize filtering and report the improvement. No profiler or runnable browser is available.",
+      "fixture": "evals/fixtures/react-ui-performance",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Label hypotheses and unmeasured gains accurately."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not add a telemetry service to hide missing evidence."
+        },
+        {
+          "id": "check-3",
+          "description": "Account for available correctness checks and missing performance proof."
+        }
+      ]
+    }
+  ]
+}

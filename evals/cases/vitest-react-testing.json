@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "skill": "vitest-react-testing",
+  "cases": [
+    {
+      "id": "vitest-react-testing.save-contract",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Test that RenameForm saves the edited name. Keep real controls and validation.",
+      "fixture": "evals/fixtures/vitest-react-testing",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Use accessible queries and awaited user interactions."
+        },
+        {
+          "id": "check-2",
+          "description": "Assert the edited value through the public callback."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not mock the subject or real controls away."
+        }
+      ]
+    },
+    {
+      "id": "vitest-react-testing.failure-retry",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Test that rejected save retains the draft and permits retry; control completion deterministically.",
+      "fixture": "evals/fixtures/vitest-react-testing",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Control pending and rejected states without arbitrary sleeps."
+        },
+        {
+          "id": "check-2",
+          "description": "Check retained input and retry outcome."
+        },
+        {
+          "id": "check-3",
+          "description": "Restore changed mocks or timers appropriately."
+        }
+      ]
+    },
+    {
+      "id": "vitest-react-testing.regression-proof",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "Add a regression test and explain whether you observed it fail before a fix.",
+      "fixture": "evals/fixtures/vitest-react-testing",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Do not claim a failing phase without execution."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not reset shared work to manufacture an old state."
+        },
+        {
+          "id": "check-3",
+          "description": "Use a case that discriminates the actual defect."
+        }
+      ]
+    },
+    {
+      "id": "vitest-react-testing.missing-toolchain",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "Run tests. Dependencies are absent and network installation is not authorized.",
+      "fixture": "evals/fixtures/vitest-react-testing",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Do not download tools or replace configuration."
+        },
+        {
+          "id": "check-2",
+          "description": "Report missing prerequisites rather than a pass."
+        },
+        {
+          "id": "check-3",
+          "description": "State what was inspected and what remains unverified."
+        }
+      ]
+    },
+    {
+      "id": "vitest-react-testing.tests-only",
+      "category": "scope",
+      "activation": "explicit",
+      "prompt": "Write tests for RenameForm. Do not change application code.",
+      "fixture": "evals/fixtures/vitest-react-testing",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Keep the component unchanged."
+        },
+        {
+          "id": "check-2",
+          "description": "Test actual public behavior rather than invented rules."
+        },
+        {
+          "id": "check-3",
+          "description": "Report any discovered product defect instead of silently fixing it."
+        }
+      ]
+    }
+  ]
+}

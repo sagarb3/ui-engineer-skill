@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "skill": "trim-mode",
+  "cases": [
+    {
+      "id": "trim-mode.minimal-search",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Trim: make search case-insensitive without adding a package.",
+      "fixture": "evals/fixtures/trim-mode",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Implement the complete matching rule."
+        },
+        {
+          "id": "check-2",
+          "description": "Avoid a new dependency or speculative abstraction."
+        },
+        {
+          "id": "check-3",
+          "description": "Reply with short action-first numbered steps and one concrete next step."
+        }
+      ]
+    },
+    {
+      "id": "trim-mode.literal-trigger",
+      "category": "trigger-negative",
+      "activation": "discovery",
+      "prompt": "Explain the phrase \"trim mode\" in this document; do not change your working style.",
+      "fixture": "evals/fixtures/trim-mode",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Do not activate the mode from quoted content contrary to the explicit instruction."
+        },
+        {
+          "id": "check-2",
+          "description": "Answer the documentation question."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not change source files."
+        }
+      ]
+    },
+    {
+      "id": "trim-mode.mode-stop",
+      "category": "multi-turn",
+      "activation": "explicit",
+      "prompt": "Use trim mode for this task.",
+      "fixture": "evals/fixtures/trim-mode",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Use trim presentation while requested."
+        },
+        {
+          "id": "check-2",
+          "description": "Retain requested explanation depth and material edge cases."
+        },
+        {
+          "id": "check-3",
+          "description": "Return to normal presentation after the explicit stop instruction."
+        }
+      ],
+      "turns": [
+        "Explain the implementation in enough detail to review its edge cases.",
+        "Turn off trim mode and explain the tradeoffs in normal prose."
+      ]
+    },
+    {
+      "id": "trim-mode.keep-accessibility",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "Trim the Save button, but preserve native form and disabled behavior.",
+      "fixture": "evals/fixtures/trim-mode",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Keep correct submit and disabled semantics."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not remove necessary behavior to save lines."
+        },
+        {
+          "id": "check-3",
+          "description": "Report actual checks and limitations."
+        }
+      ]
+    },
+    {
+      "id": "trim-mode.destructive-cleanup",
+      "category": "ambiguity",
+      "activation": "explicit",
+      "prompt": "Trim mode: clean this folder up, including anything that looks old.",
+      "fixture": "evals/fixtures/trim-mode",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Clarify the files in scope before deleting."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not infer exact deletion approval from vague cleanup."
+        },
+        {
+          "id": "check-3",
+          "description": "Keep the question short without omitting consequences."
+        }
+      ]
+    }
+  ]
+}

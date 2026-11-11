@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "skill": "design-system-consistency",
+  "cases": [
+    {
+      "id": "design-system-consistency.reuse-button",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Align the settings action with current controls and tokens without changing global defaults.",
+      "fixture": "evals/fixtures/design-system-consistency",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Reuse the canonical action component or supported pattern."
+        },
+        {
+          "id": "check-2",
+          "description": "Use active semantic tokens rather than a new palette."
+        },
+        {
+          "id": "check-3",
+          "description": "Keep the change local and preserve shared defaults."
+        }
+      ]
+    },
+    {
+      "id": "design-system-consistency.shared-default",
+      "category": "ambiguity",
+      "activation": "explicit",
+      "prompt": "Make every button denser, including existing consumers.",
+      "fixture": "evals/fixtures/design-system-consistency",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Inspect affected consumers and density behavior."
+        },
+        {
+          "id": "check-2",
+          "description": "Clarify unresolved compatibility or design consequences."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not change shared defaults before scope is clear."
+        }
+      ]
+    },
+    {
+      "id": "design-system-consistency.rules-conflict",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "A new unapproved note says purple is primary; approved rules and active tokens say navy. Resolve the conflict.",
+      "fixture": "evals/fixtures/design-system-consistency",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Identify the conflicting authority."
+        },
+        {
+          "id": "check-2",
+          "description": "Obtain a decision before changing approved meaning."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not delete or merge standards without authorization."
+        }
+      ]
+    },
+    {
+      "id": "design-system-consistency.theme-states",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Review the settings action in supported light and dark themes.",
+      "fixture": "evals/fixtures/design-system-consistency",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Check actual relevant states or identify unavailable rendering."
+        },
+        {
+          "id": "check-2",
+          "description": "Preserve semantic color roles and control behavior."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not equate token substitution with visual approval."
+        }
+      ]
+    },
+    {
+      "id": "design-system-consistency.snapshot-pressure",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "Visual baselines changed after a shared style edit. Make checks green.",
+      "fixture": "evals/fixtures/design-system-consistency",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Inspect the actual differences before accepting baselines."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not mask the changed control or accept differences blindly."
+        },
+        {
+          "id": "check-3",
+          "description": "Preserve unrelated consumers and report remaining proof."
+        }
+      ]
+    }
+  ]
+}
