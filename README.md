@@ -167,6 +167,12 @@ Say `turn off trim mode` to return to normal output. [Activation details](docs/i
 
 </details>
 
+## Project origins
+
+Read the [original project brief](docs/initial-prompt.md) and [reference notes](docs/reference-notes.md) for the collection's origins. The instructions and tooling were written for this repository; upstream source material was not copied or bundled.
+
+The proposed backdated development timeline is an illustrative reconstruction, not a record of work performed on those dates. See the [history reconstruction record](docs/history-reconstruction.md) for the actual published commits, assigned timeline, and verification scope.
+
 ---
 
 <p align="center">
