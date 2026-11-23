@@ -1,0 +1,4 @@
+interface:
+  display_name: "React UI Performance"
+  short_description: "Measured React bottlenecks and targeted improvements"
+  default_prompt: "Use $react-ui-performance to handle the requested task using project conventions and relevant verification."

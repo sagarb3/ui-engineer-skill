@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skill": "react-ui-performance",
+  "references": [
+    {
+      "id": "assets-and-large-interfaces",
+      "title": "Assets and Large Interfaces",
+      "path": "guides/assets-and-large-interfaces.md",
+      "when_to_read": "Read when the bottleneck involves loading, media, bundles, layout, large collections, or scrolling."
+    },
+    {
+      "id": "measurement-and-diagnosis",
+      "title": "Measurement and Diagnosis",
+      "path": "guides/measurement-and-diagnosis.md",
+      "when_to_read": "Read before choosing a performance change or reporting improvement."
+    },
+    {
+      "id": "rendering-and-state",
+      "title": "Rendering and State",
+      "path": "guides/rendering-and-state.md",
+      "when_to_read": "Read when profiling points to React updates, synchronous computation, context propagation, or repeated work."
+    }
+  ]
+}

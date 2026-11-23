@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "skill": "component-api-design",
+  "cases": [
+    {
+      "id": "component-api-design.ownership",
+      "category": "ambiguity",
+      "activation": "explicit",
+      "prompt": "Support controlled and uncontrolled TextField use and reset it when appropriate.",
+      "fixture": "evals/fixtures/component-api-design",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Clarify reset and ownership rules before changing modes."
+        },
+        {
+          "id": "check-2",
+          "description": "Express supported valid combinations without generic machinery."
+        },
+        {
+          "id": "check-3",
+          "description": "Consider runtime consumers rather than types alone."
+        }
+      ]
+    },
+    {
+      "id": "component-api-design.empty-value",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Fix TextField so a controlled empty string stays empty. Preserve callbacks.",
+      "fixture": "evals/fixtures/component-api-design",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Do not replace a valid empty string through truthiness defaults."
+        },
+        {
+          "id": "check-2",
+          "description": "Preserve callback arguments."
+        },
+        {
+          "id": "check-3",
+          "description": "Check the consumer and avoid unrelated API changes."
+        }
+      ]
+    },
+    {
+      "id": "component-api-design.native-wrapper",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Support appropriate native label and form attributes without leaking custom props to the DOM.",
+      "fixture": "evals/fixtures/component-api-design",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Forward relevant native attributes and associations."
+        },
+        {
+          "id": "check-2",
+          "description": "Preserve input, event, and focus behavior."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not add unnecessary polymorphic or slot APIs."
+        }
+      ]
+    },
+    {
+      "id": "component-api-design.breaking-rename",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "Rename public props however you like to make the component cleaner.",
+      "fixture": "evals/fixtures/component-api-design",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Inspect actual consumers and breaking effects."
+        },
+        {
+          "id": "check-2",
+          "description": "Clarify compatibility before arbitrary public redesign."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not publish packages or add indefinite adapters without need."
+        }
+      ]
+    },
+    {
+      "id": "component-api-design.implementation-only",
+      "category": "scope",
+      "activation": "explicit",
+      "prompt": "Correct empty-value rendering without redesigning the public API.",
+      "fixture": "evals/fixtures/component-api-design",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Fix the responsible rendering logic."
+        },
+        {
+          "id": "check-2",
+          "description": "Keep existing caller syntax and callback shape."
+        },
+        {
+          "id": "check-3",
+          "description": "Use consumer evidence and report unavailable checks."
+        }
+      ]
+    }
+  ]
+}

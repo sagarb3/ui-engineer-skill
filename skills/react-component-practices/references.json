@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skill": "react-component-practices",
+  "references": [
+    {
+      "id": "async-and-framework-boundaries",
+      "title": "Async and Framework Boundaries",
+      "path": "guides/async-and-framework-boundaries.md",
+      "when_to_read": "Read for requests, races, unmounting, hydration, and server/client integration."
+    },
+    {
+      "id": "composition-and-identity",
+      "title": "Composition and Identity",
+      "path": "guides/composition-and-identity.md",
+      "when_to_read": "Read when extracting components, moving state, changing lists, introducing hooks, or adapting public props."
+    },
+    {
+      "id": "state-and-effects",
+      "title": "State and Effects",
+      "path": "guides/state-and-effects.md",
+      "when_to_read": "Read when deciding whether a value needs state, where it belongs, or whether synchronization requires an effect."
+    }
+  ]
+}

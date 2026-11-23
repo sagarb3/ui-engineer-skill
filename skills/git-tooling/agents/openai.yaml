@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Tooling"
+  short_description: "Direct Git operations with protected user changes"
+  default_prompt: "Use $git-tooling to handle the requested task using project conventions and relevant verification."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design System Consistency"
+  short_description: "Consistent tokens, components, themes, and variants"
+  default_prompt: "Use $design-system-consistency to handle the requested task using project conventions and relevant verification."

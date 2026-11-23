@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trim Mode"
+  short_description: "Minimal complete changes and action-first replies"
+  default_prompt: "Use $trim-mode to handle the requested task using project conventions and relevant verification."

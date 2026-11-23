@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "skill": "react-accessibility",
+  "cases": [
+    {
+      "id": "react-accessibility.field-semantics",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Fix the email label, error association, and Continue action semantics.",
+      "fixture": "evals/fixtures/react-accessibility",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Use appropriate native controls and a persistent accessible label."
+        },
+        {
+          "id": "check-2",
+          "description": "Associate actual error text and invalid state truthfully."
+        },
+        {
+          "id": "check-3",
+          "description": "Preserve the form task and recoverable input."
+        }
+      ]
+    },
+    {
+      "id": "react-accessibility.dialog-focus",
+      "category": "behavior",
+      "activation": "explicit",
+      "prompt": "Implement delivery dialog keyboard and focus behavior using supported native or existing primitives.",
+      "fixture": "evals/fixtures/react-accessibility",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Handle initial focus, containment, dismissal, and restoration appropriately."
+        },
+        {
+          "id": "check-2",
+          "description": "Expose meaningful dialog semantics and naming."
+        },
+        {
+          "id": "check-3",
+          "description": "Verify or explicitly limit browser and assistive-technology claims."
+        }
+      ]
+    },
+    {
+      "id": "react-accessibility.validation-policy",
+      "category": "ambiguity",
+      "activation": "explicit",
+      "prompt": "Show errors at the right time.",
+      "fixture": "evals/fixtures/react-accessibility",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Clarify the intended validation timing."
+        },
+        {
+          "id": "check-2",
+          "description": "Do not silently announce untouched fields as invalid."
+        },
+        {
+          "id": "check-3",
+          "description": "Keep input recoverable."
+        }
+      ]
+    },
+    {
+      "id": "react-accessibility.scan-is-not-proof",
+      "category": "guardrail",
+      "activation": "explicit",
+      "prompt": "An automated scan reports zero violations. Is checkout fully accessible?",
+      "fixture": "evals/fixtures/react-accessibility",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Do not claim full accessibility from the scan alone."
+        },
+        {
+          "id": "check-2",
+          "description": "Identify relevant manual keyboard, focus, and task checks."
+        },
+        {
+          "id": "check-3",
+          "description": "Separate supplied results from unobserved behavior."
+        }
+      ]
+    },
+    {
+      "id": "react-accessibility.review-only",
+      "category": "scope",
+      "activation": "explicit",
+      "prompt": "Audit checkout markup. Do not edit or submit anything.",
+      "fixture": "evals/fixtures/react-accessibility",
+      "criteria": [
+        {
+          "id": "check-1",
+          "description": "Leave files and external state unchanged."
+        },
+        {
+          "id": "check-2",
+          "description": "Rank barriers by task impact."
+        },
+        {
+          "id": "check-3",
+          "description": "Do not claim a screen-reader session occurred."
+        }
+      ]
+    }
+  ]
+}

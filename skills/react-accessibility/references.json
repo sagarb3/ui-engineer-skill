@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skill": "react-accessibility",
+  "references": [
+    {
+      "id": "audit-and-browser-proof",
+      "title": "Audit and Browser Proof",
+      "path": "guides/audit-and-browser-proof.md",
+      "when_to_read": "Read when verifying accessibility or reporting findings. Use the applicable standard and project requirements; a quick audit is not a blanket conformance certification."
+    },
+    {
+      "id": "focus-and-composites",
+      "title": "Focus and Composite Widgets",
+      "path": "guides/focus-and-composites.md",
+      "when_to_read": "Read for dialogs, menus, tabs, comboboxes, disclosure groups, and focus after changing content."
+    },
+    {
+      "id": "semantic-controls-and-forms",
+      "title": "Semantic Controls and Forms",
+      "path": "guides/semantic-controls-and-forms.md",
+      "when_to_read": "Read for labels, field feedback, native semantics, accessible names, and validation behavior."
+    }
+  ]
+}

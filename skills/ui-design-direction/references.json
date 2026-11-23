@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "skill": "ui-design-direction",
+  "references": [
+    {
+      "id": "browser-evidence",
+      "title": "Browser Evidence",
+      "path": "guides/browser-evidence.md",
+      "when_to_read": "Use to run the target UI, inspect real output, capture useful evidence, and report the limits of available tools. Successful source edits or a build are not proof of visual quality or usability."
+    },
+    {
+      "id": "design-brief-and-exploration",
+      "title": "Design Brief and Exploration",
+      "path": "guides/design-brief-and-exploration.md",
+      "when_to_read": "Use this guide to establish a direction, compare concepts, or decide the first-screen structure. Continue an approved direction without reopening selection unless new requirements invalidate it."
+    },
+    {
+      "id": "image-led-design",
+      "title": "Image-led Design",
+      "path": "guides/image-led-design.md",
+      "when_to_read": "Use when a concept image is requested or when an available image tool is suitable for exploring a composition. This workflow does not require image generation for every screen and does not turn a design image into application code automatically."
+    },
+    {
+      "id": "interactive-experiences",
+      "title": "Interactive Experiences",
+      "path": "guides/interactive-experiences.md",
+      "when_to_read": "Use for games, drawing surfaces, timed experiences, tactile controls, simulated objects, and flows where manipulating the object is central to the product. Do not treat them as ordinary buttons with decorative effects."
+    },
+    {
+      "id": "media-and-assets",
+      "title": "Media and Assets",
+      "path": "guides/media-and-assets.md",
+      "when_to_read": "Use when a design depends on photography, illustration, diagrams, textures, a family of objects, video, or real-time 3D. Media must contribute to the product rather than compensate for a weak layout."
+    },
+    {
+      "id": "motion-and-transitions",
+      "title": "Motion and Transitions",
+      "path": "guides/motion-and-transitions.md",
+      "when_to_read": "Use when an interaction, state change, entrance, or navigation transition needs motion. Motion should communicate what happened, where something went, or what deserves attention. Do not add animation mechanically to every screen."
+    },
+    {
+      "id": "responsive-reconstruction",
+      "title": "Responsive Reconstruction",
+      "path": "guides/responsive-reconstruction.md",
+      "when_to_read": "Use for screenshot recreation, approved mockup implementation, or layouts whose behavior changes across widths, input methods, and viewport heights."
+    },
+    {
+      "id": "scroll-storytelling",
+      "title": "Scroll Storytelling",
+      "path": "guides/scroll-storytelling.md",
+      "when_to_read": "Use when a page explicitly needs an expressive scroll sequence, product demonstration, or staged visual explanation. Do not impose cinematic scrolling on forms, work queues, documentation, or other surfaces where direct navigation is more useful."
+    },
+    {
+      "id": "task-artifacts-and-design-rules",
+      "title": "Task Artifacts and Design Rules",
+      "path": "guides/task-artifacts-and-design-rules.md",
+      "when_to_read": "Use when a UI task produces candidates, raw images, recordings, screenshots, investigation notes, or proposed design rules. Keep working material separate from the application without inventing a new project structure for every task."
+    },
+    {
+      "id": "usability-walkthrough",
+      "title": "Usability Walkthrough",
+      "path": "guides/usability-walkthrough.md",
+      "when_to_read": "Use to check whether someone can understand the interface and complete an important task. A visual critique asks how the screen communicates; this walkthrough asks what a user can actually do and understand through the interaction."
+    },
+    {
+      "id": "visual-composition",
+      "title": "Visual Composition",
+      "path": "guides/visual-composition.md",
+      "when_to_read": "Use this guide when a screen's hierarchy, typography, spacing, surfaces, or visual identity needs deliberate design. Begin with the whole composition, then inspect component details."
+    },
+    {
+      "id": "visual-review",
+      "title": "Visual Review",
+      "path": "guides/visual-review.md",
+      "when_to_read": "Use for a requested visual critique or the visual acceptance pass of an implemented screen. Judge the actual rendered result against the product's task and constraints. Separate this from a usability walkthrough and from a source-code review."
+    }
+  ]
+}

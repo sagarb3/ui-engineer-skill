@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "skill": "design-system-consistency",
+  "references": [
+    {
+      "id": "design-rules-and-visual-regressions",
+      "title": "Design Rules and Visual Regressions",
+      "path": "guides/design-rules-and-visual-regressions.md",
+      "when_to_read": "Read when documentation conflicts with implementation, visual baselines change, or a UI task affects shared rules."
+    },
+    {
+      "id": "shared-components-and-variants",
+      "title": "Shared Components and Variants",
+      "path": "guides/shared-components-and-variants.md",
+      "when_to_read": "Read when extending a primitive, choosing a variant, or deciding whether a visual requirement belongs locally or globally."
+    },
+    {
+      "id": "tokens-and-themes",
+      "title": "Tokens and Themes",
+      "path": "guides/tokens-and-themes.md",
+      "when_to_read": "Read when choosing colors, spacing, typography, elevation, density, or theme-aware styles."
+    }
+  ]
+}
