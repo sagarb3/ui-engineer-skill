@@ -1,0 +1,34 @@
+# Contributing
+
+## Before You Start
+
+- Search existing issues and pull requests.
+- Use the security reporting process for vulnerabilities.
+- Open an issue before large or breaking changes unless maintainers state otherwise.
+
+## Development Setup
+
+```bash
+REPLACE_ME_SETUP_COMMAND
+```
+
+## Quality Checks
+
+```bash
+REPLACE_ME_FORMAT_COMMAND
+REPLACE_ME_LINT_COMMAND
+REPLACE_ME_TEST_COMMAND
+REPLACE_ME_BUILD_COMMAND
+```
+
+## Pull Requests
+
+- Keep the change focused.
+- Explain intent, scope, testing, and compatibility impact.
+- Add or update tests and documentation.
+- Update the changelog when required by the release policy.
+- Do not include credentials, private data, or generated noise.
+
+## Review and Merge
+
+REPLACE_ME_REVIEW_POLICY

@@ -4,9 +4,17 @@ A skill is a workflow loaded for a relevant task. A specialist agent is a separa
 
 ## What Is Included
 
-Every skill includes `agents/openai.yaml` with its display name, short description, and an invocation example. This is skill UI metadata. It does not launch a process, configure automatic delegation, choose a paid model, or grant additional permissions.
+Each core skill includes `agents/openai.yaml` with its display name, short description, and an invocation example. This is skill UI metadata. It does not launch a process, configure automatic delegation, choose a paid model, or grant additional permissions.
 
 The reference indexes and evaluation cases describe content and verification. Neither is a runtime orchestration configuration. The evaluation tool prepares local workspaces and records reviewer judgments; it does not create model sessions.
+
+## Bundled Copilot Agent
+
+The optional [Agentic Workflows package](../plugins/agentic-workflows/README.md) includes a native profile at `com.github.copilot/agents/agentic-workflows.agent.md`. Install `agentic-workflows@ui-engineer-skills`, start a new session, and select it through `/agent`.
+
+The profile routes workflow creation, changes, and debugging to relevant upstream guidance. It sets `infer: false` for explicit selection and includes repository instructions. It does not install gh-aw, configure an engine, supply authentication, or grant permission to publish or run hosted workflows. Those dependencies and actions require their normal setup and authorization.
+
+Its two use cases and five review scenarios are in the package. Plugin installation and skill discovery were tested locally; live agent dispatch, model behavior, and hosted runs are separate checks. The original six UI roles below remain proposed roles rather than bundled profiles.
 
 ## Practical Role Examples
 

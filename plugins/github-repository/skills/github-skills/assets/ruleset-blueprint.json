@@ -1,0 +1,33 @@
+{
+  "name": "default-branch",
+  "enforcement": "active",
+  "targets": ["main"],
+  "bypass_actors": [
+    {
+      "actor": "repository-admin",
+      "mode": "pull_request_only",
+      "reason": "Emergency use with post-change review"
+    }
+  ],
+  "rules": {
+    "deletion": false,
+    "non_fast_forward": false,
+    "required_linear_history": true,
+    "required_signatures": false,
+    "pull_request": {
+      "required": true,
+      "required_approving_review_count": 1,
+      "dismiss_stale_reviews": true,
+      "require_code_owner_review": true,
+      "require_last_push_approval": false,
+      "required_conversation_resolution": true
+    },
+    "required_status_checks": [
+      "validate / test"
+    ]
+  },
+  "notes": [
+    "Create and observe required checks before activating this ruleset.",
+    "Verify plan and organization policy support before applying."
+  ]
+}

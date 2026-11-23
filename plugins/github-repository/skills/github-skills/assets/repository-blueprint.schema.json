@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/github-skills/repository-blueprint.schema.json",
+  "title": "GitHub Repository Blueprint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "repository",
+    "architecture",
+    "files",
+    "governance",
+    "issues_and_projects",
+    "pull_requests",
+    "rulesets",
+    "actions",
+    "security",
+    "releases",
+    "implementation",
+    "validation"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "repository": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["name", "visibility", "default_branch", "repository_type"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "visibility": {"enum": ["public", "private", "internal", "unspecified"]},
+        "default_branch": {"type": "string", "minLength": 1},
+        "repository_type": {
+          "enum": ["application", "library", "sdk", "cli", "infrastructure", "documentation", "configuration", "dataset", "template", "skill", "monorepo", "mixed", "other"]
+        },
+        "description": {"type": "string"},
+        "topics": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "architecture": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["layout"],
+      "properties": {
+        "layout": {"type": "string", "minLength": 1},
+        "primary_languages": {"type": "array", "items": {"type": "string"}},
+        "package_managers": {"type": "array", "items": {"type": "string"}},
+        "release_unit": {"type": "string"}
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["path", "action", "purpose"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "action": {"enum": ["create", "update", "move", "delete", "keep"]},
+          "purpose": {"type": "string", "minLength": 1},
+          "source": {"type": "string"}
+        }
+      }
+    },
+    "governance": {"type": "object", "additionalProperties": true},
+    "issues_and_projects": {"type": "object", "additionalProperties": true},
+    "pull_requests": {"type": "object", "additionalProperties": true},
+    "rulesets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["name", "enforcement", "targets", "rules"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "enforcement": {"enum": ["active", "evaluate", "disabled", "unspecified"]},
+          "targets": {"type": "array", "items": {"type": "string"}},
+          "rules": {"type": "object"}
+        }
+      }
+    },
+    "actions": {"type": "object", "additionalProperties": true},
+    "security": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "secrets_in_repository": {"const": false},
+        "actions_default_permissions": {"type": "string"}
+      }
+    },
+    "releases": {"type": "object", "additionalProperties": true},
+    "implementation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["id", "type", "description", "status", "depends_on"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "type": {"enum": ["file_change", "repository_setting", "organization_setting", "secret_or_variable", "manual_verification", "external_system"]},
+          "description": {"type": "string", "minLength": 1},
+          "status": {"enum": ["planned", "ready", "blocked", "applied", "verified", "skipped"]},
+          "depends_on": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "validation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["name", "type", "expected"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "type": {"enum": ["command", "manual", "github_check", "api_readback", "negative_test"]},
+          "command": {"type": "string"},
+          "expected": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "metadata": {"type": "object"},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}

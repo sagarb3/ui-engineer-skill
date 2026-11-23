@@ -94,3 +94,7 @@ Any failed criterion makes the case `failed`; otherwise any unverified criterion
 Compare baseline and treatment with the same model, environment, permissions, starting data, and review standard. Preserve raw evidence and report run counts, failures, incomplete criteria, and costs only when actually observed. Repeat runs when variability matters; one successful example is not a reliability estimate.
 
 Keep structural validation, tool tests, manually reviewed behavior, and model-based evaluation results separate. Do not publish a fabricated pass rate or infer superiority from the number of cases authored. No behavioral results are bundled by default.
+
+## Optional Plugin Review Cases
+
+The original 50 cases apply to the ten core skills. The two optional packages each supply five additional manual review scenarios under `plugins/*/evals/cases.json`; these are not inputs to the core preparation/scoring CLI. Run `python3 scripts/check_plugins.py` to validate packaging, add-on case structure, and imported-source integrity. Structural checks do not establish live model quality or hosted workflow execution.

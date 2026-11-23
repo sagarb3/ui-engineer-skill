@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "repository": {
+    "name": "example-cli",
+    "visibility": "public",
+    "default_branch": "main",
+    "repository_type": "cli",
+    "description": "Example command-line tool",
+    "topics": ["cli", "open-source"]
+  },
+  "architecture": {
+    "layout": "single-package",
+    "primary_languages": ["Python"],
+    "package_managers": ["pip"],
+    "release_unit": "single package"
+  },
+  "files": [
+    {"path": "README.md", "action": "create", "purpose": "Project orientation"},
+    {"path": ".github/workflows/ci.yml", "action": "create", "purpose": "Pull request validation"}
+  ],
+  "governance": {"maintainers": ["team:maintainers"]},
+  "issues_and_projects": {"issue_forms": true},
+  "pull_requests": {"required": true, "approvals": 1},
+  "rulesets": [
+    {
+      "name": "default-branch",
+      "enforcement": "active",
+      "targets": ["main"],
+      "rules": {"required_pull_request": true}
+    }
+  ],
+  "actions": {"default_permissions": "contents: read"},
+  "security": {"secrets_in_repository": false, "actions_default_permissions": "read-only"},
+  "releases": {"versioning": "semver", "trigger": "manual"},
+  "implementation": [
+    {
+      "id": "files-001",
+      "type": "file_change",
+      "description": "Add repository files",
+      "status": "ready",
+      "depends_on": []
+    },
+    {
+      "id": "settings-001",
+      "type": "repository_setting",
+      "description": "Apply the default-branch ruleset after CI reports successfully",
+      "status": "planned",
+      "depends_on": ["files-001"]
+    }
+  ],
+  "validation": [
+    {"name": "Blueprint validation", "type": "command", "command": "python scripts/validate_repository_blueprint.py blueprint.json", "expected": "No errors"},
+    {"name": "Required check observed", "type": "manual", "expected": "CI check completes on a pull request before ruleset activation"}
+  ]
+}

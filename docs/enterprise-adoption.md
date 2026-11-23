@@ -45,4 +45,4 @@ Keep the previous approved version available for rollback. Do not rewrite publis
 
 The repository includes ten skills, 39 guides, reference indexes, UI metadata, 50 evaluation cases, local fixtures, and Python/Git evaluation tooling. It does not provide a hosted management service, SSO integration, centralized policy enforcement, certification, or a guaranteed model-performance result.
 
-Live-model evaluations and native-client validation must be performed in the intended environment. Specialist agent profiles and automatic delegation have not been implemented. Establish those roles and permissions explicitly before adding runtime configuration.
+Live-model evaluations and native-client validation must be performed in the intended environment. The optional Agentic Workflows plugin includes one explicitly selected Copilot profile. The six UI specialist roles remain examples, and automatic delegation is not configured. Establish those roles and permissions explicitly before adding runtime configuration.

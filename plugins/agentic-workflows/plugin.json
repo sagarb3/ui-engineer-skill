@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agentic-workflows",
+  "version": "0.1.0",
+  "description": "An explicitly invoked Agentic Workflows agent and skill for designing, updating, debugging, and compiling gh-aw workflows.",
+  "author": {
+    "name": "Sagar Bhattacharya",
+    "url": "https://github.com/sagarb3"
+  },
+  "homepage": "https://github.com/sagarb3/ui-engineer-skill",
+  "repository": "https://github.com/sagarb3/ui-engineer-skill",
+  "keywords": [
+    "github",
+    "agentic-workflows",
+    "gh-aw",
+    "automation"
+  ],
+  "license": "MIT"
+}

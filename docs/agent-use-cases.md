@@ -1,6 +1,6 @@
 # Agent Role Use Cases
 
-These six roles describe useful ways to organize work with the installed skills. Native specialist agent profiles and automatic delegation are not implemented in this repository. The role prompts below can be used in an ordinary session; they do not require a nonexistent custom-agent command.
+These six roles describe useful ways to organize work with the installed skills. These six UI roles have no bundled native profiles or automatic delegation. A separate optional [Agentic Workflows agent](../plugins/agentic-workflows/README.md) is available as a Copilot CLI plugin. The role prompts below can be used in an ordinary session; they do not require a nonexistent custom-agent command.
 
 Install the named skills first, replace illustrative paths with real application paths, and supply the accepted requirements. Expected handoffs are acceptance criteria rather than recorded outputs. A role prompt does not change host permissions or create an independent reviewer.
 

@@ -1,0 +1,35 @@
+name: Feature request
+description: Propose an outcome or capability
+title: "[Feature]: "
+labels:
+  - "type: feature"
+  - "status: needs-triage"
+body:
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Existing requests
+      options:
+        - label: I searched existing issues and discussions.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Explain the problem without assuming one implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and workarounds
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and compatibility considerations

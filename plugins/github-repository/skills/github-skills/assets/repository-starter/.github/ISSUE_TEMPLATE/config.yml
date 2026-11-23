@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: REPLACE_ME_PRIVATE_SECURITY_URL
+    about: Report vulnerabilities privately. Do not create a public issue.
+  - name: Questions and support
+    url: REPLACE_ME_SUPPORT_URL
+    about: Ask usage questions in the supported channel.

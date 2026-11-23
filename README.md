@@ -50,16 +50,14 @@ Each skill provides a practical process, decision rules, failure cases, and veri
 
 ## Quick start
 
-Install for GitHub Copilot CLI from a local checkout:
+Install through the GitHub Copilot CLI plugin marketplace:
 
 ```sh
-git clone https://github.com/sagarb3/ui-engineer-skill.git
-cd ui-engineer-skill
-mkdir -p "$HOME/.copilot/skills"
-cp -Ri skills/. "$HOME/.copilot/skills/"
+copilot plugin marketplace add sagarb3/ui-engineer-skill
+copilot plugin install ui-engineer@ui-engineer-skills
 ```
 
-Start a new session or run `/skills reload`. The copy command asks before replacing existing files. These POSIX-shell commands install instructions only; no application packages are added.
+Start a new session and request a skill by name. This installs the ten core skills with their supporting resources. No application dependencies are added.
 
 Try a focused request in your application repository:
 
@@ -86,6 +84,51 @@ Copy complete skill folders, including guides and metadata, then verify discover
 
 </details>
 
+## Copilot CLI marketplace
+
+Choose the packages your team needs. The core React library stays independent of the optional repository and workflow tools.
+
+| Plugin | Included | Install |
+| --- | --- | --- |
+| **UI Engineer** | Ten React UI and practical Git skills, 39 guides, and worked examples | `copilot plugin install ui-engineer@ui-engineer-skills` |
+| [GitHub Repository](plugins/github-repository/README.md) | Repository engineering skill, reference material, templates, schemas, and Python validators | `copilot plugin install github-repository@ui-engineer-skills` |
+| [Agentic Workflows](plugins/agentic-workflows/README.md) | Workflow routing skill and an explicitly selected Copilot agent | `copilot plugin install agentic-workflows@ui-engineer-skills` |
+
+With all three installed, the collection supplies **12 skills and one native Copilot agent**. Each optional package includes two practical use cases and five review scenarios. Browse and update through the CLI:
+
+```sh
+copilot plugin marketplace browse ui-engineer-skills
+copilot plugin marketplace update ui-engineer-skills
+copilot plugin update ui-engineer
+```
+
+Update installed add-ons by their own names. See [plugin maintenance](docs/plugin-maintenance.md) for versioning, validation, upstream updates, and rollback. This is a repository-hosted marketplace; it does not claim GitHub endorsement or inclusion in the built-in catalog.
+
+### Optional package examples
+
+**Repository engineering:** install `github-repository`, then ask:
+
+```text
+Use github-skills to review this repository's contribution and release
+workflow. Inspect existing files first. Propose a minimal blueprint and
+validate it with the bundled helper. Do not publish settings or releases.
+```
+
+The [repository package examples](plugins/github-repository/README.md#use-cases) include a repository blueprint and CI review. The helpers require Python 3.10+; YAML-related helpers additionally need PyYAML, as documented in the package.
+
+**Workflow engineering:** install `agentic-workflows`, start a new session, and use `/agent` to select `agentic-workflows`:
+
+```text
+Design a manually triggered CI health report using agentic-workflows.
+Review existing workflows and propose the local source. Ask about any
+missing destination or permissions before implementing. Do not trigger
+a hosted run or configure secrets.
+```
+
+The [workflow package examples](plugins/agentic-workflows/README.md#use-cases) cover creation and debugging. The agent is explicitly selected (`infer: false`). Remote guidance, gh-aw tooling, authentication, and engine configuration are separate prerequisites; installation does not configure or run them.
+
+The optional packages adapt MIT-licensed material from [he8um/github-skills](https://github.com/he8um/github-skills) and [githubnext/agentics](https://github.com/githubnext/agentics). Exact upstream revisions, local changes, and preserved licenses are recorded in [third-party notices](THIRD_PARTY_NOTICES.md) and the [source lock](third-party/sources.json).
+
 ## The skill library
 
 | Skill | What it brings to the workflow |
@@ -107,7 +150,7 @@ The UI design skill includes twelve specialist guides, from [concept exploration
 
 ## Skill examples
 
-Choose a scenario and copy its prompt into a session with the named skill installed. Replace illustrative paths and component names with your application. Every skill includes two worked scenarios, linked below, with inputs, expected deliverables, and verification. The examples describe intended behavior, not evaluation results or checks already executed.
+Choose a scenario and copy its prompt into a session with the named skill installed. Replace illustrative paths and component names with your application. Every core skill includes two worked scenarios, linked below, with inputs, expected deliverables, and verification. The examples describe intended behavior, not evaluation results or checks already executed.
 
 <details>
 <summary><strong>Harness: preserve a draft after a failed save</strong></summary>
@@ -276,7 +319,7 @@ surface needed by current use cases.
 
 ## Agent role examples
 
-These are role-based prompts for ordinary sessions using installed skills. Native specialist profiles and automatic delegation are not implemented. Naming a role does not create an independent execution context or change permissions.
+These are role-based prompts for ordinary sessions using installed skills. These six UI specialist roles are examples, not bundled native profiles. The optional Agentic Workflows package supplies a separate, explicitly selected native agent. Naming a role does not create an independent execution context or change permissions.
 
 | Role and use case | Copyable starting prompt | Expected handoff |
 | --- | --- | --- |
@@ -335,7 +378,7 @@ The collection fits into an existing development workflow. It does not add a hos
 <details>
 <summary><strong>Skills, agent metadata, and specialist agents</strong></summary>
 
-`agents/openai.yaml` provides skill UI metadata. It does not create or launch a specialist agent. Native agent profiles and automatic delegation are separate capabilities and have not been implemented in this collection.
+`agents/openai.yaml` provides skill UI metadata. It does not create or launch a specialist agent. The optional Agentic Workflows plugin supplies one native Copilot profile. The six UI role examples remain ordinary prompts; automatic delegation is not configured.
 
 See [the agent guide](docs/agents.md) for role design, host-specific formats, permission boundaries, and evaluation considerations.
 
@@ -354,7 +397,7 @@ Say `turn off trim mode` to return to normal output. [Activation details](docs/i
 
 ## Project origins
 
-Read the [original project brief](docs/initial-prompt.md) and [reference notes](docs/reference-notes.md) for the collection's origins. The instructions and tooling were written for this repository; upstream source material was not copied or bundled.
+Read the [original project brief](docs/initial-prompt.md) and [reference notes](docs/reference-notes.md) for the collection's origins. The original ten skills and evaluation tooling were written for this repository. The two optional packages contain reviewed, adapted upstream material with preserved MIT notices; see [third-party notices](THIRD_PARTY_NOTICES.md).
 
 The proposed backdated development timeline is an illustrative reconstruction, not a record of work performed on those dates. See the [history reconstruction record](docs/history-reconstruction.md) for the actual published commits, assigned timeline, and verification scope.
 

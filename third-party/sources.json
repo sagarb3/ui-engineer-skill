@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "components": [
+    {
+      "id": "github-skills",
+      "repository": "https://github.com/he8um/github-skills",
+      "revision": "93fb4a9c6b11bf34b4e00d7621a08cfc44014640",
+      "license": "MIT",
+      "modifications": [
+        "Added English-only output isolation, task clarification, authorization, dependency, and helper-path rules to SKILL.md.",
+        "Added local examples and plugin packaging separately from the imported source."
+      ],
+      "files": [
+        {
+          "upstream_path": "github-skills/SKILL.md",
+          "path": "plugins/github-repository/skills/github-skills/SKILL.md",
+          "upstream_blob_sha1": "944ea05f2ab1893db00e9e5becc2319cfae750ea",
+          "adapted": true,
+          "installed_sha256": "fac914e0cb1b91c1343eb7b17a726326b0c1b4746c051b8296c9fe492aa98a9e"
+        },
+        {
+          "upstream_path": "github-skills/agents/openai.yaml",
+          "path": "plugins/github-repository/skills/github-skills/agents/openai.yaml",
+          "upstream_blob_sha1": "abd498280894cf0fe8dd837956084ab8b33d325e",
+          "adapted": false,
+          "installed_sha256": "fef502ec2c4d5a9c962b5b409eac93cb244ffb5687b359484f495d0ce6c5ae47"
+        },
+        {
+          "upstream_path": "github-skills/assets/github-labels.json",
+          "path": "plugins/github-repository/skills/github-skills/assets/github-labels.json",
+          "upstream_blob_sha1": "5104a423dc7dd323185ea91902afa01a10cbbe04",
+          "adapted": false,
+          "installed_sha256": "50ba4430902e5b673d6129dc74df891568722574e1b0801dee4c1c1636609117"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-blueprint.schema.json",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-blueprint.schema.json",
+          "upstream_blob_sha1": "6b6d6404e868c94da38cfd3b735b91d0f0495168",
+          "adapted": false,
+          "installed_sha256": "309a49995c47ddf63a3be32033415f378c8ed4c97c2c082e4ee4310bec6ada42"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/.github/CODEOWNERS.example",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/.github/CODEOWNERS.example",
+          "upstream_blob_sha1": "9e476f880d3bae666c4eb1117055f6abf32229d8",
+          "adapted": false,
+          "installed_sha256": "bacb65d3320e887406ed70f8f0f8c0a974a599cc07a189cd01edc60132da1ba7"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/.github/ISSUE_TEMPLATE/bug_report.yml",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/.github/ISSUE_TEMPLATE/bug_report.yml",
+          "upstream_blob_sha1": "5fd4dfb1b57a9e7025addabded80bdb7f3dee603",
+          "adapted": false,
+          "installed_sha256": "f241d3b274f32f7c29bdf4ba1ed37602d5b7073a7a6812f515154266206eac34"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/.github/ISSUE_TEMPLATE/config.yml",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/.github/ISSUE_TEMPLATE/config.yml",
+          "upstream_blob_sha1": "ab57c8880a18e18888a063e240e1e2a41077e810",
+          "adapted": false,
+          "installed_sha256": "5ae906cb66bb471c59fc89f364a8370b5c2aca6775801b567f8fd577811adb15"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/.github/ISSUE_TEMPLATE/feature_request.yml",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/.github/ISSUE_TEMPLATE/feature_request.yml",
+          "upstream_blob_sha1": "8d21335033f5c7fcd3c3a6035939bcdcf28bbd63",
+          "adapted": false,
+          "installed_sha256": "5085cca73efbbfbc0a82f2790c2c75ab44889f6b8873d107e96b390dc023f94e"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/.github/PULL_REQUEST_TEMPLATE.md",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/.github/PULL_REQUEST_TEMPLATE.md",
+          "upstream_blob_sha1": "3d1aaf64c4048b75bac06b16b17af5a21ab56854",
+          "adapted": false,
+          "installed_sha256": "574e981030e172e5eed4783281ec14c283bc88a87afd865e0d7f6c1599257eb0"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/.github/dependabot.yml",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/.github/dependabot.yml",
+          "upstream_blob_sha1": "500322c44d5d3ce0ecfae60a2c2608451525c072",
+          "adapted": false,
+          "installed_sha256": "3b91560e1a20194d92c3d59bbf3ed0926b9e862d121dc9c4f7e0e0e7962fdc73"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/.github/release.yml",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/.github/release.yml",
+          "upstream_blob_sha1": "208d3ee7555ec8e55dc85a2fd49957accce99298",
+          "adapted": false,
+          "installed_sha256": "33f765f84677281cf6fa266ea9f9bc91843504059660416f11d6347fa4c8eb26"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/.github/workflows/ci.yml",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/.github/workflows/ci.yml",
+          "upstream_blob_sha1": "34d0825dbd6beb47e754f018a6b247dfea2a2cf3",
+          "adapted": false,
+          "installed_sha256": "104d878de17ad6a9d5bf9b7edcd85e60ff52af3f83667327e2a33aa70d91f1d6"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/.github/workflows/release.yml",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/.github/workflows/release.yml",
+          "upstream_blob_sha1": "dead3f9dad9f89131755f2f97e0446b1aa383130",
+          "adapted": false,
+          "installed_sha256": "85ebd26ff8cd8dd0f1815d0904f3921a24fdd73c787b6d47febbdd8be0a80b78"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/CONTRIBUTING.md.template",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/CONTRIBUTING.md.template",
+          "upstream_blob_sha1": "00da35f48e9e775bf0a8dac49c4af8d4519f4696",
+          "adapted": false,
+          "installed_sha256": "5ec9f7ff9ff26fef6360c7eda13e0c4223f7950dcb9353940fa4430661998052"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/README.md.template",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/README.md.template",
+          "upstream_blob_sha1": "be87941d74f68e6233788edc50d54bc9c3578b6d",
+          "adapted": false,
+          "installed_sha256": "7c06f80d6b613809bc230533ed65962d64959de69bd5fec3a4e333ec50d1bbf3"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/SECURITY.md.template",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/SECURITY.md.template",
+          "upstream_blob_sha1": "b73fb3d109f43cf29cbb1e1badeb7009ac7f7359",
+          "adapted": false,
+          "installed_sha256": "ce3a0b5097ddf171efdb8b7085d5827a4d8f465320334ac7ed9860c5e97a351f"
+        },
+        {
+          "upstream_path": "github-skills/assets/repository-starter/SUPPORT.md.template",
+          "path": "plugins/github-repository/skills/github-skills/assets/repository-starter/SUPPORT.md.template",
+          "upstream_blob_sha1": "f3a2a8927d4e15eee3e776f107c521a56b94d474",
+          "adapted": false,
+          "installed_sha256": "c1110467e5f91d8342795633ad2079e5c06a69c9e820daeaa9788fdfa9da1be2"
+        },
+        {
+          "upstream_path": "github-skills/assets/ruleset-blueprint.json",
+          "path": "plugins/github-repository/skills/github-skills/assets/ruleset-blueprint.json",
+          "upstream_blob_sha1": "29d043834e2fecfc64c602e99327d628d8bbe4e7",
+          "adapted": false,
+          "installed_sha256": "6b5bd89914428373ec57f769fedf5c7051c4dfea11af18b048918c6779dec442"
+        },
+        {
+          "upstream_path": "github-skills/references/audit-and-troubleshooting.md",
+          "path": "plugins/github-repository/skills/github-skills/references/audit-and-troubleshooting.md",
+          "upstream_blob_sha1": "4459079ca817d86c22d4c718f89bce3f587ee027",
+          "adapted": false,
+          "installed_sha256": "3594d7290ea2386b40f6d34d25d47f53e88e9db137d98feb8957c70d8aaceae0"
+        },
+        {
+          "upstream_path": "github-skills/references/community-health-and-governance.md",
+          "path": "plugins/github-repository/skills/github-skills/references/community-health-and-governance.md",
+          "upstream_blob_sha1": "0f83801259ed33b8f984deada33fb6cb1bf1076f",
+          "adapted": false,
+          "installed_sha256": "3b01f614b7b3c1c74c36bd572e9251f9a50d4b8b58611c63561f18fa9761414a"
+        },
+        {
+          "upstream_path": "github-skills/references/github-actions-design.md",
+          "path": "plugins/github-repository/skills/github-skills/references/github-actions-design.md",
+          "upstream_blob_sha1": "b4b2231bc96b977020cc69fd0d007ec698882abd",
+          "adapted": false,
+          "installed_sha256": "44b2e6d7f6c3ab3ecddc31e53d1b50d9fe664db1ac5a6807700e1c35f7827f77"
+        },
+        {
+          "upstream_path": "github-skills/references/github-actions-security.md",
+          "path": "plugins/github-repository/skills/github-skills/references/github-actions-security.md",
+          "upstream_blob_sha1": "ce60f2826a6d347a0fadb1e165a56036f99cdd62",
+          "adapted": false,
+          "installed_sha256": "6855c824c34f64a530aa2fb1cdd17a3ab5b47d7c6af750a5a133a382d5e892bf"
+        },
+        {
+          "upstream_path": "github-skills/references/github-cli-api-and-automation.md",
+          "path": "plugins/github-repository/skills/github-skills/references/github-cli-api-and-automation.md",
+          "upstream_blob_sha1": "2904abb09204851e5b120fc9771f36d1c32bc7ee",
+          "adapted": false,
+          "installed_sha256": "584e2949aba2531b6f01738ae3bf03e5d3c63854e86d998532883f65f66fa115"
+        },
+        {
+          "upstream_path": "github-skills/references/issues-projects-and-triage.md",
+          "path": "plugins/github-repository/skills/github-skills/references/issues-projects-and-triage.md",
+          "upstream_blob_sha1": "7de9e0850a172f60076e2314c6b855bbe16e3d9c",
+          "adapted": false,
+          "installed_sha256": "473747f2f31ccd64f1d17627669ac10589a247ff19350576f900348ea76a86f1"
+        },
+        {
+          "upstream_path": "github-skills/references/output-templates.md",
+          "path": "plugins/github-repository/skills/github-skills/references/output-templates.md",
+          "upstream_blob_sha1": "9f6c6a239ac3e79b56b1aad5c0dde28ef77380db",
+          "adapted": false,
+          "installed_sha256": "78ddb4a207a4ceeb6985fb7bbec4fd42661d6cd9daa148e8c2952993e2da678c"
+        },
+        {
+          "upstream_path": "github-skills/references/pull-requests-branches-and-rulesets.md",
+          "path": "plugins/github-repository/skills/github-skills/references/pull-requests-branches-and-rulesets.md",
+          "upstream_blob_sha1": "6cd015aa658a9cec0788a2ecfcde7e1ea88c02c1",
+          "adapted": false,
+          "installed_sha256": "8e0a14f0f9b13e5cb107f53405c85bec2aab9fd7fc1669f1f18dbc8505af527c"
+        },
+        {
+          "upstream_path": "github-skills/references/releases-versioning-and-packages.md",
+          "path": "plugins/github-repository/skills/github-skills/references/releases-versioning-and-packages.md",
+          "upstream_blob_sha1": "1cf4f4dc5cbceea7324cd7c3dbb040b23039dee6",
+          "adapted": false,
+          "installed_sha256": "eef674fa43674ad5b1fd59a0c9015562aa3aa615d4eb628528547ddf85091c75"
+        },
+        {
+          "upstream_path": "github-skills/references/repository-architecture.md",
+          "path": "plugins/github-repository/skills/github-skills/references/repository-architecture.md",
+          "upstream_blob_sha1": "cb346f2654ec512760e71ed9c68bd8002e49f9df",
+          "adapted": false,
+          "installed_sha256": "867810e099de78413f4ad92ea2a956e2a4d4b61cf2ab4d01975e960010002880"
+        },
+        {
+          "upstream_path": "github-skills/references/repository-security.md",
+          "path": "plugins/github-repository/skills/github-skills/references/repository-security.md",
+          "upstream_blob_sha1": "65a718b133f2f55d27fc9ada56a65590953d3df1",
+          "adapted": false,
+          "installed_sha256": "2200b49862afd273a9e09c1a33d77c7ce0ca2d8f6a0835765f06efc49c5aad1a"
+        },
+        {
+          "upstream_path": "github-skills/references/source-notes.md",
+          "path": "plugins/github-repository/skills/github-skills/references/source-notes.md",
+          "upstream_blob_sha1": "1a7b69d026efc2f9c0822750eabe85a739a0a12e",
+          "adapted": false,
+          "installed_sha256": "1635f286b27c28c1f3e69ed9baba483989a8c8c8cfc3633d5aedfd3219dac590"
+        },
+        {
+          "upstream_path": "github-skills/scripts/audit_repository_package.py",
+          "path": "plugins/github-repository/skills/github-skills/scripts/audit_repository_package.py",
+          "upstream_blob_sha1": "1db7f81f85ed04205cf4fad1bcea936726f79788",
+          "adapted": false,
+          "installed_sha256": "dfee8c280d850fc30b0df333629d2b39fee5badbdaed5fe6bbb300f49493a877"
+        },
+        {
+          "upstream_path": "github-skills/scripts/validate_actions_workflow.py",
+          "path": "plugins/github-repository/skills/github-skills/scripts/validate_actions_workflow.py",
+          "upstream_blob_sha1": "b00cb2198541abb8021248b6d90ceabff916bfc8",
+          "adapted": false,
+          "installed_sha256": "176c882973994c5ebaad4fc08423f71cb748947f1b2f23abc50d0ca23d29e7a0"
+        },
+        {
+          "upstream_path": "github-skills/scripts/validate_repository_blueprint.py",
+          "path": "plugins/github-repository/skills/github-skills/scripts/validate_repository_blueprint.py",
+          "upstream_blob_sha1": "ec30c5afdbe50df5ddff6d506652537cef8c9fef",
+          "adapted": false,
+          "installed_sha256": "dea8dbb2f4ebcd9a3d5349831678a48d0007c56ba9ffd1b7b695d1ef5814b91f"
+        },
+        {
+          "upstream_path": "LICENSE",
+          "path": "plugins/github-repository/LICENSE",
+          "upstream_blob_sha1": "4ca8a9ad57c2a4fa345d119c3968f0b9b3032cf5",
+          "adapted": false,
+          "installed_sha256": "4a03d0160652a50074fa33c5332285aa8a0d9e22eebf87d41305fd26d5af7c4b"
+        },
+        {
+          "upstream_path": "LICENSE",
+          "path": "plugins/github-repository/skills/github-skills/LICENSE",
+          "upstream_blob_sha1": "4ca8a9ad57c2a4fa345d119c3968f0b9b3032cf5",
+          "adapted": false,
+          "installed_sha256": "4a03d0160652a50074fa33c5332285aa8a0d9e22eebf87d41305fd26d5af7c4b"
+        },
+        {
+          "upstream_path": "examples/sample-repository-blueprint.json",
+          "path": "plugins/github-repository/skills/github-skills/examples/sample-repository-blueprint.json",
+          "upstream_blob_sha1": "65e3dc335c1b367abb70dda9938e7a356c44843a",
+          "adapted": false,
+          "installed_sha256": "4b292ff175085fdd39087a3f4d3df2d4d28284500d51b8d49548ff232d67f0ea"
+        }
+      ]
+    },
+    {
+      "id": "agentic-workflows",
+      "repository": "https://github.com/githubnext/agentics",
+      "revision": "139fa09ef17cde4135e696ff8e7af09bc5ddfa6e",
+      "license": "MIT",
+      "modifications": [
+        "Added English-only isolation, authorization, dependency, and remote-reference boundaries to the skill and agent.",
+        "Converted explicit invocation to Copilot CLI infer:false and enabled repository instructions.",
+        "Replaced an unbundled local telemetry-skill assumption with an explicit external-dependency note."
+      ],
+      "files": [
+        {
+          "upstream_path": ".github/skills/agentic-workflows/SKILL.md",
+          "path": "plugins/agentic-workflows/skills/agentic-workflows/SKILL.md",
+          "upstream_blob_sha1": "4c983cc5ac53e0ba91df8c86749d638b67d9c675",
+          "adapted": true,
+          "installed_sha256": "14c18b3c8c682f1cd2d4870be1cfc87f734d8e72b0f676ecd9a904674d6a5296"
+        },
+        {
+          "upstream_path": ".github/agents/agentic-workflows.md",
+          "path": "plugins/agentic-workflows/com.github.copilot/agents/agentic-workflows.agent.md",
+          "upstream_blob_sha1": "08c6d9a24f466b691812c0f218cafb2e57f184fd",
+          "adapted": true,
+          "installed_sha256": "3789f5840d385006b68f872d9572d4abd416b7b5b3633f6e86e1e888ab40952e"
+        },
+        {
+          "upstream_path": "LICENSE",
+          "path": "plugins/agentic-workflows/LICENSE",
+          "upstream_blob_sha1": "9a9cc50d37ea399f7ccc2f14b6c6d4cc4de02efc",
+          "adapted": false,
+          "installed_sha256": "9e48ecfa18e2b15169746a3c97beda4d1d6c6796097038498ca434ca7e0ccd44"
+        },
+        {
+          "upstream_path": "LICENSE",
+          "path": "plugins/agentic-workflows/skills/agentic-workflows/LICENSE",
+          "upstream_blob_sha1": "9a9cc50d37ea399f7ccc2f14b6c6d4cc4de02efc",
+          "adapted": false,
+          "installed_sha256": "9e48ecfa18e2b15169746a3c97beda4d1d6c6796097038498ca434ca7e0ccd44"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Replace teams and users with real owners that have repository access.
+* @REPLACE_ME_DEFAULT_OWNER
+
+/.github/workflows/ @REPLACE_ME_AUTOMATION_OWNER
+/.github/CODEOWNERS @REPLACE_ME_REPOSITORY_ADMIN_OWNER
+/SECURITY.md @REPLACE_ME_SECURITY_OWNER

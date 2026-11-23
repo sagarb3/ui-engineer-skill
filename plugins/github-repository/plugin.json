@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "github-repository",
+  "version": "0.1.0",
+  "description": "GitHub repository engineering, governance, Actions, security, releases, and machine-readable blueprints.",
+  "author": {
+    "name": "Sagar Bhattacharya",
+    "url": "https://github.com/sagarb3"
+  },
+  "homepage": "https://github.com/sagarb3/ui-engineer-skill",
+  "repository": "https://github.com/sagarb3/ui-engineer-skill",
+  "keywords": [
+    "github",
+    "repository",
+    "actions",
+    "governance"
+  ],
+  "license": "MIT"
+}

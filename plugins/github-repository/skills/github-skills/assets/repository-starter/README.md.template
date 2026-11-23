@@ -1,0 +1,46 @@
+# REPLACE_ME_PROJECT_NAME
+
+REPLACE_ME_ONE_SENTENCE_DESCRIPTION
+
+## Status
+
+REPLACE_ME_PROJECT_STATUS
+
+## Features
+
+- REPLACE_ME_FEATURE
+
+## Requirements
+
+- REPLACE_ME_REQUIREMENT
+
+## Installation
+
+```bash
+REPLACE_ME_INSTALL_COMMAND
+```
+
+## Usage
+
+```bash
+REPLACE_ME_USAGE_COMMAND
+```
+
+## Development
+
+```bash
+REPLACE_ME_SETUP_COMMAND
+REPLACE_ME_TEST_COMMAND
+```
+
+## Security
+
+Report vulnerabilities using the process in [SECURITY.md](SECURITY.md). Do not open public issues for vulnerability details.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+REPLACE_ME_LICENSE_STATEMENT

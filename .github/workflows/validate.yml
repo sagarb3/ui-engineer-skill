@@ -1,0 +1,28 @@
+name: Validate collection and plugins
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Check runtime
+        run: python3 --version
+      - name: Validate core collection
+        run: python3 scripts/evaluate.py validate
+      - name: Validate plugin packaging and source locks
+        run: python3 scripts/check_plugins.py
+      - name: Run local tooling tests
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python3 -m unittest discover -s tests -v

@@ -1,0 +1,32 @@
+{
+  "name": "ui-engineer-skills",
+  "owner": {
+    "name": "Sagar Bhattacharya"
+  },
+  "metadata": {
+    "description": "React UI engineering and optional GitHub tooling for Copilot CLI.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "ui-engineer",
+      "description": "React UI engineering skills for design, implementation, accessibility, testing, performance, and Git.",
+      "version": "0.1.0",
+      "source": "./"
+    },
+    {
+      "name": "github-repository",
+      "description": "GitHub repository engineering, governance, Actions, security, releases, and machine-readable blueprints.",
+      "version": "0.1.0",
+      "source": "./plugins/github-repository",
+      "license": "MIT"
+    },
+    {
+      "name": "agentic-workflows",
+      "description": "An explicitly invoked Agentic Workflows agent and skill for designing, updating, debugging, and compiling gh-aw workflows.",
+      "version": "0.1.0",
+      "source": "./plugins/agentic-workflows",
+      "license": "MIT"
+    }
+  ]
+}

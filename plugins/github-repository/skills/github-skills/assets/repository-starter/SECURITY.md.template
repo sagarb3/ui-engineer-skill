@@ -1,0 +1,23 @@
+# Security Policy
+
+## Supported Versions
+
+REPLACE_ME_SUPPORTED_VERSION_POLICY
+
+## Reporting a Vulnerability
+
+Do not open a public issue for vulnerability details.
+
+Use this private reporting method:
+
+REPLACE_ME_PRIVATE_REPORTING_METHOD
+
+Include:
+
+- affected version or commit,
+- impact,
+- reproduction steps or proof of concept,
+- suggested mitigation if known,
+- disclosure constraints.
+
+REPLACE_ME_ACKNOWLEDGEMENT_AND_DISCLOSURE_PROCESS

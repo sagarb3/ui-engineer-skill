@@ -1,0 +1,17 @@
+[
+  {"name": "type: bug", "color": "d73a4a", "description": "A confirmed or reported defect"},
+  {"name": "type: feature", "color": "a2eeef", "description": "A proposed capability or enhancement"},
+  {"name": "type: docs", "color": "0075ca", "description": "Documentation work"},
+  {"name": "type: maintenance", "color": "c5def5", "description": "Maintenance, refactoring, or tooling"},
+  {"name": "type: dependencies", "color": "0366d6", "description": "Dependency updates"},
+  {"name": "status: needs-triage", "color": "fbca04", "description": "Awaiting initial maintainer triage"},
+  {"name": "status: needs-info", "color": "d876e3", "description": "More information is required"},
+  {"name": "status: accepted", "color": "0e8a16", "description": "Accepted for implementation"},
+  {"name": "status: blocked", "color": "b60205", "description": "Blocked by another decision or dependency"},
+  {"name": "priority: critical", "color": "b60205", "description": "Requires immediate attention"},
+  {"name": "priority: high", "color": "d93f0b", "description": "High priority"},
+  {"name": "priority: medium", "color": "fbca04", "description": "Medium priority"},
+  {"name": "priority: low", "color": "c2e0c6", "description": "Low priority"},
+  {"name": "good first issue", "color": "7057ff", "description": "Suitable for a first contribution"},
+  {"name": "help wanted", "color": "008672", "description": "Maintainers welcome contributor help"}
+]

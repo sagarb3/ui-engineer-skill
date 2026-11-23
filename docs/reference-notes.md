@@ -1,6 +1,6 @@
 # Reference Notes
 
-This collection was developed using the projects below as research and inspiration. Its skills, guides, fixtures, evaluation tool, tests, and README were written for this repository. Upstream source files, scripts, images, and evaluation corpora were not copied or vendored.
+This collection was developed using the projects below as research and inspiration. Its original ten skills, guides, fixtures, evaluation tool, tests, and README were written for this repository without vendoring the eight inspiration projects below. The later optional packages do vendor reviewed MIT-licensed sources from two additional projects, documented separately below.
 
 The distinction matters: the references informed decisions and coverage, but this repository is not a translation or repackaging of their implementations. It must not claim their test results, tooling, integrations, licenses, or runtime capabilities as its own.
 
@@ -26,3 +26,12 @@ These changes reflect the actual development conversation. The [initial brief](i
 These notes describe the collection itself. Do not copy them, the initial brief, authoring provenance, or reference-project links into downstream product code or documentation. Preserve legitimate legal notices for any third-party material a consuming project actually uses.
 
 No repository-wide license has been selected. A reference project's license does not automatically apply to this collection, and inspiration does not transfer permission to redistribute unrelated source material.
+
+## Optional Package Sources
+
+| Project | Bundled material | Review record |
+| --- | --- | --- |
+| [he8um/github-skills](https://github.com/he8um/github-skills) | Repository engineering skill, reference guides, schemas, templates, validators, sample blueprint, and skill metadata | Adapted entry point; other imported files preserved with their licenses |
+| [githubnext/agentics](https://github.com/githubnext/agentics) | Agentic Workflows routing skill and dispatcher profile | Adapted to explicit Copilot plugin selection and local authorization boundaries |
+
+Both sources are MIT licensed. [Third-party notices](../THIRD_PARTY_NOTICES.md) identify copyright holders and adaptations. The [source lock](../third-party/sources.json) records immutable upstream commits, original Git blobs, and installed hashes. No automatic upstream synchronization is enabled.

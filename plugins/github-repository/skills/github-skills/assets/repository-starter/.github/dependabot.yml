@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "REPLACE_ME_ECOSYSTEM"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "type: dependencies"
+      - "status: needs-triage"
