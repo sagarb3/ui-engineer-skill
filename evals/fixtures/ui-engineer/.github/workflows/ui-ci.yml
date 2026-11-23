@@ -1,0 +1,12 @@
+name: UI CI
+on:
+  pull_request:
+    paths: ['packages/ui/**']
+permissions:
+  contents: read
+jobs:
+  gate:
+    name: UI gate
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "fixture only"

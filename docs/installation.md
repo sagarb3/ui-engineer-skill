@@ -19,7 +19,7 @@ copilot plugin install github-repository@ui-engineer-skills
 copilot plugin install agentic-workflows@ui-engineer-skills
 ```
 
-Start a new session and inspect `copilot plugin list` and `copilot skill list`. The core package contributes ten skills; the optional packages add one skill each. Use `/agent` to select the optional `agentic-workflows` profile explicitly. No workflow runtime, secrets, engine, or application dependency is installed.
+Start a new session and inspect `copilot plugin list` and `copilot skill list`. The core package contributes eleven skills; the optional packages add one skill each. Use `/agent` to select the optional `agentic-workflows` profile explicitly. No workflow runtime, secrets, engine, or application dependency is installed.
 
 Update the catalog and each selected package explicitly:
 
@@ -28,7 +28,7 @@ copilot plugin marketplace update ui-engineer-skills
 copilot plugin update ui-engineer
 ```
 
-See [plugin maintenance](plugin-maintenance.md) for independent add-on updates, versioning, validation, and rollback. This is a repository-hosted marketplace, not a claim of built-in catalog inclusion. Use a current plugin-capable CLI; local installation and twelve-skill discovery were checked with Copilot CLI 1.0.114. Live model behavior and hosted workflow execution were not tested.
+See [plugin maintenance](plugin-maintenance.md) for independent add-on updates, versioning, validation, and rollback. This is a repository-hosted marketplace, not a claim of built-in catalog inclusion. Use a current plugin-capable CLI; local installation and discovery of all eleven core skills for version 0.2.0 were checked with Copilot CLI 1.0.114. Live model behavior and hosted workflow execution were not tested.
 
 ### Manual Core Skill Installation
 

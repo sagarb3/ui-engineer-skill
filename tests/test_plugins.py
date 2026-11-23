@@ -26,7 +26,7 @@ class PluginTests(unittest.TestCase):
     def test_complete_catalog_and_reviewed_imports(self):
         result = check_plugins.validate()
         self.assertEqual(result["plugins"], 3)
-        self.assertEqual(result["skills"], 12)
+        self.assertEqual(result["skills"], 13)
         self.assertEqual(result["agents"], 1)
         self.assertEqual(result["addon_review_cases"], 10)
         self.assertEqual(result["locked_imports"], 40)
@@ -41,7 +41,7 @@ class PluginTests(unittest.TestCase):
 
     def test_manifest_and_catalog_versions_must_agree(self):
         root = self.copy_collection()
-        self.edit_json(root / "plugin.json", lambda value: value.update(version="0.2.0"))
+        self.edit_json(root / "plugin.json", lambda value: value.update(version="0.3.0"))
         with self.assertRaisesRegex(ValueError, "identity/version"):
             check_plugins.validate(root)
 

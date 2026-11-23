@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "skill": "ui-engineer",
+  "reviewed_on": "2026-11-23",
+  "method": "Original guidance and templates synthesized from reviewed sources; no upstream workflow bodies vendored into this skill.",
+  "sources": [
+    {
+      "repository": "https://github.com/github/gh-aw",
+      "revision": "b2079f45216d1e64599b1663d8dcc66380df0567",
+      "files": [
+        ".github/aw/create-agentic-workflow-validation.md",
+        ".github/aw/create-agentic-workflow.md",
+        ".github/aw/engines.json",
+        ".github/aw/github-agentic-workflows.md",
+        ".github/aw/github-mcp-server-tools.md",
+        ".github/aw/network.md",
+        ".github/aw/safe-outputs-content.md",
+        ".github/aw/syntax-engine.md",
+        ".github/aw/workflow-constraints.md",
+        ".github/aw/workflow-editing.md",
+        ".github/extensions/smoke-copilot-dynamic-workflow/extension.mjs",
+        ".github/extensions/smoke-copilot-dynamic-workflow/workflow.mjs",
+        ".github/workflows/smoke-copilot-dynamic-workflow.md",
+        "README.md",
+        "docs/src/content/docs/reference/engines/copilot.md",
+        "docs/src/content/docs/reference/frontmatter.md",
+        "docs/src/content/docs/reference/safe-outputs.md",
+        "docs/src/content/docs/reference/workflow-structure.md"
+      ]
+    },
+    {
+      "repository": "https://github.com/githubnext/agentics",
+      "revision": "139fa09ef17cde4135e696ff8e7af09bc5ddfa6e",
+      "files": [
+        "README.md",
+        "workflows/accessibility-review.md",
+        "workflows/ci-doctor.md",
+        "workflows/daily-doc-updater.md",
+        "workflows/daily-efficiency-improver.md",
+        "workflows/daily-test-improver.md",
+        "workflows/doc-updater.md",
+        "workflows/efficiency-improver.md",
+        "workflows/issue-triage.md",
+        "workflows/link-checker.md",
+        "workflows/repo-assist.md",
+        "workflows/test-improver.md"
+      ]
+    },
+    {
+      "repository": "https://github.com/he8um/github-skills",
+      "revision": "93fb4a9c6b11bf34b4e00d7621a08cfc44014640",
+      "files": [
+        "github-skills/SKILL.md",
+        "github-skills/references/audit-and-troubleshooting.md",
+        "github-skills/references/community-health-and-governance.md",
+        "github-skills/references/github-actions-design.md",
+        "github-skills/references/github-actions-security.md",
+        "github-skills/references/output-templates.md",
+        "github-skills/references/repository-architecture.md"
+      ]
+    }
+  ],
+  "action_pins": [
+    {
+      "repository": "actions/setup-node",
+      "version": "v7.1.0",
+      "sha": "949feb2413d6458794dcd2491c4babbbce0c15c1"
+    },
+    {
+      "repository": "pnpm/action-setup",
+      "version": "v6.1.1",
+      "sha": "73e46992e05b19abd31f2f3c20e0e7370d762115"
+    },
+    {
+      "repository": "actions/upload-artifact",
+      "version": "v7.0.2",
+      "sha": "cf430e030ddbb5b0abf93d22962f4752f3646cd9"
+    },
+    {
+      "repository": "actions/checkout",
+      "version": "v7.0.1",
+      "sha": "3d3c42e5aac5ba805825da76410c181273ba90b1"
+    }
+  ],
+  "compilation_check": {
+    "compiler_version": "v1.2.2",
+    "release_commit": "399a445fe2d8926c616b54b1b82a16b5b2be4445",
+    "action_mode": "release",
+    "templates": [
+      "ci-doctor",
+      "docs-sync",
+      "dynamic-review"
+    ],
+    "strict_compilation": "passed",
+    "remaining_warning": "Copilot dynamic workflows are experimental.",
+    "hosted_execution_run": false,
+    "live_model_evaluations_run": 0
+  }
+}

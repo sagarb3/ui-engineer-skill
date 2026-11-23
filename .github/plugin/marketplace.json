@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "React UI engineering and optional GitHub tooling for Copilot CLI.",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "ui-engineer",
-      "description": "React UI engineering skills for design, implementation, accessibility, testing, performance, and Git.",
-      "version": "0.1.0",
+      "description": "Eleven UI engineering skills covering frontend CI/CD, secure gh-aw workflows, design, testing, accessibility, and Git.",
+      "version": "0.2.0",
       "source": "./"
     },
     {

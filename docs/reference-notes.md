@@ -35,3 +35,7 @@ No repository-wide license has been selected. A reference project's license does
 | [githubnext/agentics](https://github.com/githubnext/agentics) | Agentic Workflows routing skill and dispatcher profile | Adapted to explicit Copilot plugin selection and local authorization boundaries |
 
 Both sources are MIT licensed. [Third-party notices](../THIRD_PARTY_NOTICES.md) identify copyright holders and adaptations. The [source lock](../third-party/sources.json) records immutable upstream commits, original Git blobs, and installed hashes. No automatic upstream synchronization is enabled.
+
+## Frontend Delivery Skill
+
+The added [ui-engineer skill](../skills/ui-engineer/README.md) synthesizes frontend-specific CI/CD, gh-aw authoring, and repository audit guidance from [github/gh-aw](https://github.com/github/gh-aw), [githubnext/agentics](https://github.com/githubnext/agentics), and [he8um/github-skills](https://github.com/he8um/github-skills). Its guides and templates are authored for this collection; reviewed source revisions and compiler/action mappings are recorded in its [source notes](../skills/ui-engineer/guides/sources.md) and [research index](../skills/ui-engineer/sources.json). Existing optional vendored packages and their preserved notices remain separate.

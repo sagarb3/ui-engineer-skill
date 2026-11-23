@@ -1,0 +1,14 @@
+{
+  "name": "ui-workspace-fixture",
+  "private": true,
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "vitest run",
+    "build": "vite build",
+    "build-storybook": "storybook build",
+    "test:storybook": "playwright test --project=storybook",
+    "test:e2e": "playwright test --project=chromium"
+  }
+}

@@ -26,3 +26,5 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: "1"
         run: python3 -m unittest discover -s tests -v
+      - name: Check dynamic workflow argument and result boundaries
+        run: node --test tests/ui-engineer-dynamic.test.mjs

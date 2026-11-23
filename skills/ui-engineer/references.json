@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "skill": "ui-engineer",
+  "references": [
+    {
+      "id": "deterministic-ci",
+      "title": "Deterministic UI CI",
+      "path": "guides/deterministic-ci.md",
+      "when_to_read": "Read for required checks, affected paths, efficient jobs, Storybook, Playwright, previews, and fork safety."
+    },
+    {
+      "id": "agentic-workflows",
+      "title": "Agentic Workflow Authoring",
+      "path": "guides/agentic-workflows.md",
+      "when_to_read": "Read before writing or compiling gh-aw sources or opting into experimental dynamic Copilot extensions."
+    },
+    {
+      "id": "automation-recipes",
+      "title": "Bounded UI Automation Recipes",
+      "path": "guides/automation-recipes.md",
+      "when_to_read": "Read when selecting CI Doctor, docs/test/efficiency improvements, accessibility review, link checks, or issue triage."
+    },
+    {
+      "id": "repository-practices",
+      "title": "Repository Practices and Audit Deliverables",
+      "path": "guides/repository-practices.md",
+      "when_to_read": "Read for governance, trust boundaries, settings plans, and evidence-backed structured audit output."
+    },
+    {
+      "id": "frontend-delivery",
+      "title": "Everyday Frontend Delivery",
+      "path": "guides/frontend-delivery.md",
+      "when_to_read": "Read for component ownership, behavior testing, accessibility, tokens, performance, or preview handoffs."
+    },
+    {
+      "id": "sources",
+      "title": "Reviewed Sources and Freshness",
+      "path": "guides/sources.md",
+      "when_to_read": "Read to check source revisions, compiler/action pins, validation limits, and version-sensitive upstream documentation."
+    }
+  ]
+}

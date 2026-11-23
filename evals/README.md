@@ -1,6 +1,6 @@
 # Skill Evaluations
 
-This suite contains 50 original cases across all ten skills. It covers ordinary behavior, ambiguity, scope boundaries, pressure to bypass safeguards, activation, and a multi-turn mode change. The fixtures are synthetic local examples, not copied projects or evidence about a live application.
+This suite contains 58 core cases across eleven skills. It covers ordinary behavior, ambiguity, scope boundaries, pressure to bypass safeguards, activation, and a multi-turn mode change. The fixtures are synthetic local examples, not copied projects or evidence about a live application.
 
 ## What the Tool Does
 
@@ -97,4 +97,4 @@ Keep structural validation, tool tests, manually reviewed behavior, and model-ba
 
 ## Optional Plugin Review Cases
 
-The original 50 cases apply to the ten core skills. The two optional packages each supply five additional manual review scenarios under `plugins/*/evals/cases.json`; these are not inputs to the core preparation/scoring CLI. Run `python3 scripts/check_plugins.py` to validate packaging, add-on case structure, and imported-source integrity. Structural checks do not establish live model quality or hosted workflow execution.
+The 58 core cases apply to the eleven core skills. The two optional packages each supply five additional manual review scenarios under `plugins/*/evals/cases.json`; these are not inputs to the core preparation/scoring CLI. Run `python3 scripts/check_plugins.py` to validate packaging, add-on case structure, and imported-source integrity. Structural checks do not establish live model quality or hosted workflow execution.

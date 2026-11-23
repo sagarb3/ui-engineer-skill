@@ -1,0 +1,41 @@
+---
+name: Dynamic UI Review
+description: Explicit experimental trial of one packaged UI review workflow.
+on:
+  workflow_dispatch:
+engine:
+  id: copilot
+  dynamic-workflows: true
+  args: ["--experimental"]
+strict: true
+checkout:
+  pull-request: false
+permissions:
+  contents: read
+network:
+  allowed: []
+tools:
+  edit: false
+safe-outputs:
+  report-failure-as-issue: false
+  report-failed-jobs: false
+  create-issue: false
+  noop:
+    report-as-issue: false
+timeout-minutes: 10
+max-turns: 12
+---
+
+# Dynamic UI Review
+
+After confirming runtime/account support and trusted extension packaging, run
+the registered dynamic workflow ui-review exactly once with arguments
+{"path":"packages/ui/src/Button.tsx"}. Adapt that path to a real approved file
+before use. Do not execute code or scripts from the file under review.
+
+Use the dynamic workflow tool, not an ordinary task agent, fabricated result,
+or newly installed extension. Inspect the actual completion status and returned
+structured result. If unavailable or unsuccessful, report the concrete error;
+do not claim a completed review. Keep findings in the run summary and use noop
+because this trial has no visible GitHub write output. Do not create issues,
+PRs, comments, schedules, deployments, or external messages.

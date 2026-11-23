@@ -142,13 +142,13 @@ h2 .icon { color:#236e65; margin-right:.5rem; width:1.05em; height:1.05em; }
         <div class="terminal-label">GitHub Copilot CLI / quick start</div>
         <pre><code>copilot plugin marketplace add sagarb3/ui-engineer-skill
 copilot plugin install ui-engineer@ui-engineer-skills</code></pre>
-        <p class="terminal-note">Ten core skills. Optional packages install separately.</p>
+        <p class="terminal-note">Eleven core skills. Optional packages install separately.</p>
       </div>
     </div>
     <div class="stats" aria-label="Core collection contents">
-      <div class="stat"><strong>10</strong>focused core skills</div>
-      <div class="stat"><strong>39</strong>supporting guides</div>
-      <div class="stat"><strong>50</strong>core evaluation cases</div>
+      <div class="stat"><strong>11</strong>focused core skills</div>
+      <div class="stat"><strong>45</strong>supporting guides</div>
+      <div class="stat"><strong>58</strong>core evaluation cases</div>
       <div class="stat"><strong>3</strong>versioned plugins</div>
     </div>
   </div>
@@ -167,6 +167,7 @@ copilot plugin install ui-engineer@ui-engineer-skills</code></pre>
         <a href="#quick-start">Quick start</a>
         <a href="#copilot-cli-marketplace">Plugin marketplace</a>
         <a href="#the-skill-library">Skill library</a>
+        <a href="#frontend-ci-workflows">Frontend CI + gh-aw</a>
         <a href="#skill-examples">Skill examples</a>
         <a href="#agent-role-examples">Agent use cases</a>
         <a href="#an-operating-model-teams-can-review">Operating model</a>
@@ -209,7 +210,7 @@ copilot plugin install ui-engineer@ui-engineer-skills</code></pre>
 <pre><code class="language-sh">copilot plugin marketplace add sagarb3/ui-engineer-skill
 copilot plugin install ui-engineer@ui-engineer-skills
 </code></pre>
-<p>Start a new session and request a skill by name. This installs the ten core skills with their supporting resources. No application dependencies are added.</p>
+<p>Start a new session and request a skill by name. This installs the eleven core skills with their supporting resources. No application dependencies are added.</p>
 <p>Try a focused request in your application repository:</p>
 <pre><code class="language-text">Use harness and react-accessibility to review the checkout form.
 Identify keyboard, focus, and labeling barriers. Do not edit files.
@@ -265,7 +266,7 @@ Identify keyboard, focus, and labeling barriers. Do not edit files.
 <tbody>
 <tr>
 <td><strong>UI Engineer</strong></td>
-<td>Ten React UI and practical Git skills, 39 guides, and worked examples</td>
+<td>Eleven UI engineering and practical Git skills, 45 guides, and worked examples</td>
 <td><code>copilot plugin install ui-engineer@ui-engineer-skills</code></td>
 </tr>
 <tr>
@@ -280,7 +281,7 @@ Identify keyboard, focus, and labeling barriers. Do not edit files.
 </tr>
 </tbody>
 </table></div>
-<p>With all three installed, the collection supplies <strong>12 skills and one native Copilot agent</strong>. Each optional package includes two practical use cases and five review scenarios. Browse and update through the CLI:</p>
+<p>With all three installed, the collection supplies <strong>13 skills and one native Copilot agent</strong>. Each optional package includes two practical use cases and five review scenarios. Browse and update through the CLI:</p>
 <pre><code class="language-sh">copilot plugin marketplace browse ui-engineer-skills
 copilot plugin marketplace update ui-engineer-skills
 copilot plugin update ui-engineer
@@ -311,6 +312,7 @@ a hosted run or configure secrets.
 </tr>
 </thead>
 <tbody>
+<tr><td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-engineer/SKILL.md">UI engineer</a></td><td>Frontend CI/CD, secure gh-aw authoring, dynamic workflow opt-in, and everyday UI delivery</td></tr>
 <tr>
 <td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/harness/SKILL.md">Harness</a></td>
 <td>A baseline for scope, clarification, ownership, verification, and delivery</td>
@@ -354,10 +356,20 @@ a hosted run or configure secrets.
 </tbody>
 </table></div>
 <p>Each skill is self-contained. Its <code>SKILL.md</code> routes relevant work to local guides, and <code>references.json</code> makes those guides discoverable to tooling. Copy the whole folder; no companion skill is required.</p>
-<p>The UI design skill includes twelve specialist guides, from <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/design-brief-and-exploration.md">concept exploration</a> and <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/scroll-storytelling.md">scroll storytelling</a> to <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/visual-review.md">visual review</a> and <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/usability-walkthrough.md">usability walkthroughs</a>. Each other skill has three focused guides.</p>
+<p>The UI design skill includes twelve specialist guides, from <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/design-brief-and-exploration.md">concept exploration</a> and <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/scroll-storytelling.md">scroll storytelling</a> to <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/visual-review.md">visual review</a> and <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/usability-walkthrough.md">usability walkthroughs</a>. The other nine original skills each have three focused guides. The new UI engineer skill adds six guides and seven template files for deterministic CI, previews, bounded gh-aw maintenance, and experimental dynamic extension packaging.</p>
 </section>
+<section class="content-section" aria-labelledby="frontend-ci-workflows"><h2 id="frontend-ci-workflows"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-branch"></use></svg>UI engineering from component to pipeline.</h2>
+<p>The self-contained <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-engineer/README.md">ui-engineer skill</a> combines deterministic UI CI, Storybook/Playwright, preview safety, repository audits, and bounded gh-aw automation. Six guides, seven template files, two worked examples, and eight evaluation scenarios make the delivery approach inspectable.</p>
+<p>Its guidance is synthesized from <a href="https://github.com/github/gh-aw">github/gh-aw</a>, <a href="https://github.com/githubnext/agentics">githubnext/agentics</a>, and <a href="https://github.com/he8um/github-skills">he8um/github-skills</a>. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-engineer/guides/sources.md">Review the source and compiler record</a>. Experimental Copilot dynamic extensions require separate opt-in; ordinary gh-aw authoring does not.</p></section>
 <section class="content-section"><h2 id="skill-examples"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-compass"></use></svg>Skill examples</h2>
 <p>Choose a scenario and copy its prompt into a session with the named skill installed. Replace illustrative paths and component names with your application. Every core skill includes two worked scenarios, linked below, with inputs, expected deliverables, and verification. The examples describe intended behavior, not evaluation results or checks already executed.</p>
+<details><summary><strong>UI engineer: secure frontend CI and add bounded CI Doctor</strong></summary>
+<p><strong>Use case:</strong> A UI workspace needs reliable required checks, safe previews, and evidence-backed CI failure diagnosis.</p>
+<pre><code>Use ui-engineer to review UI CI, including shared tokens and docs-only
+changes. Preserve required checks and fork safety. Propose CI Doctor
+with read-only investigation, one deduplicated safe output, and clear
+no-op conditions. Compile source plus lock when available. Do not dispatch.</code></pre>
+<p><strong>Expect:</strong> A scoped CI correction, explicit preview prerequisites, bounded gh-aw source and compiler evidence, with hosted results kept separate. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-engineer/examples.md">Full examples</a>.</p></details>
 <details>
 <summary><strong>Harness: preserve a draft after a failed save</strong></summary>
 <p><strong>Use case:</strong> A local bug fix must preserve existing architecture and unrelated work.</p>
@@ -549,7 +561,7 @@ surface needed by current use cases.
 <p><strong><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/operating-model.md">Read the operating model</a></strong></p>
 </section>
 <section class="content-section"><h2 id="evaluate-before-you-roll-out"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-check"></use></svg>Evaluate before you roll out</h2>
-<p>Fifty cases cover normal work, ambiguity, scope, safeguards, activation, and multi-turn behavior. Local fixtures and explicit review criteria make the expected standard inspectable before adoption.</p>
+<p>Fifty-eight cases cover normal work, ambiguity, scope, safeguards, activation, and multi-turn behavior. Local fixtures and explicit review criteria make the expected standard inspectable before adoption.</p>
 <p>The evaluation tool prepares separate baseline and with-skill workspaces. Reviewers record observed evidence; new cases begin as <code>unverified</code>, and incomplete evidence cannot produce a passing result.</p>
 <pre><code class="language-sh">python3 scripts/evaluate.py validate
 python3 scripts/evaluate.py list

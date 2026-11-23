@@ -28,9 +28,9 @@ class EvaluationTests(unittest.TestCase):
 
     def test_collection_has_complete_reference_and_case_coverage(self):
         result = evaluate.validate()
-        self.assertEqual(result["skills"], 10)
-        self.assertEqual(result["guides"], 39)
-        self.assertEqual(result["cases"], 50)
+        self.assertEqual(result["skills"], 11)
+        self.assertEqual(result["guides"], 45)
+        self.assertEqual(result["cases"], 58)
         self.assertEqual(result["behavioral_evaluations_run"], 0)
 
     def test_preparation_installs_complete_skill_without_hidden_grading_notes(self):

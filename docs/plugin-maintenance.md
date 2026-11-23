@@ -6,7 +6,7 @@ This repository is a GitHub-hosted Copilot CLI marketplace with three versioned 
 
 | Plugin | Source | Included components |
 | --- | --- | --- |
-| `ui-engineer` | Repository root | Ten original skills, guides, examples, indexes, and metadata |
+| `ui-engineer` | Repository root | Eleven core skills, guides, examples, indexes, and metadata |
 | `github-repository` | `plugins/github-repository` | Adapted GitHub repository-engineering skill, references, templates, schemas, and helpers |
 | `agentic-workflows` | `plugins/agentic-workflows` | Adapted workflow routing skill and explicitly selected Copilot agent |
 
@@ -50,7 +50,7 @@ The core plugin can also be installed directly with `copilot plugin install saga
 
 An instruction edit can change behavior even if its file extension is Markdown. Evaluate the affected contract, not just JSON syntax. No live-model pass rate is implied by structural checks.
 
-The initial manifests declare `0.1.0`. A version field alone does not create a Git tag or GitHub Release. Advertise a tag-based pin only after that tag is actually published.
+The core manifest and catalog now declare `0.2.0`; optional packages remain at `0.1.0`. A version field alone does not create a Git tag or GitHub Release. Advertise a tag-based pin only after that tag is actually published.
 
 ## Validate Before Publishing
 
@@ -58,13 +58,14 @@ The initial manifests declare `0.1.0`. A version field alone does not create a G
 python3 scripts/evaluate.py validate
 python3 scripts/check_plugins.py
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+node --test tests/ui-engineer-dynamic.test.mjs
 ```
 
-The first command covers the original ten skills and 50 core cases. The second checks manifest/catalog agreement, fixed component locations, local source boundaries, add-on review cases, and pinned imported-file integrity. Unit tests cover the preparation, review, and packaging helpers. None of these commands calls a model or starts a workflow.
+The first command covers the eleven core skills and 58 core cases. The second checks manifest/catalog agreement, fixed component locations, local source boundaries, add-on review cases, and pinned imported-file integrity. Unit tests cover the preparation, review, and packaging helpers. None of these commands calls a model or starts a workflow.
 
 For a native installation check, use an isolated Copilot configuration and a temporary checkout rather than changing a user's normal profile. Register the local marketplace, install the selected packages, inspect plugin and skill discovery, and verify explicit agent selection. Record the actual client version. Validate live workflow or model behavior separately when the required tools, account, environment, and authorization exist.
 
-Local registration, all three installs, and twelve-skill discovery were verified with Copilot CLI 1.0.114 using a temporary profile. The native agent file is checked structurally; live agent dispatch, model behavior, and hosted runs were not exercised.
+Local registration, all three installs, and twelve-skill discovery for version 0.1.0 were verified with Copilot CLI 1.0.114 using a temporary profile. Version 0.2.0 was also installed locally with all eleven core skills discovered; the UI engineer templates were compiled separately as recorded in their source guide. The native agent file is checked structurally; live agent dispatch, model behavior, and hosted runs were not exercised.
 
 The validation workflow in `.github/workflows/validate.yml` runs the model-free commands on changes and pull requests. It does not install the add-ons' optional helper dependencies, call a model, provision an engine, or execute gh-aw workflows.
 

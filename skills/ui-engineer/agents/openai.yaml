@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Engineer"
+  short_description: "Frontend CI, secure gh-aw workflows, and UI delivery"
+  default_prompt: "Use $ui-engineer to inspect our UI workspace and delivery workflows, make the smallest complete authorized change, and verify CI, trust boundaries, and relevant frontend behavior."

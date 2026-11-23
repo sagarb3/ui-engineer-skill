@@ -30,7 +30,7 @@ Start with the relevant `SKILL.md` process. Read only the supporting guides trig
 
 Every skill contains a `references.json` index with local guide titles, paths, and reading triggers. The index is a collection convention, not a universal client configuration. Copy complete skill folders so those paths remain valid.
 
-The UI design skill has twelve guides covering direction, visual composition, reconstruction, media, image-led work, motion, scroll storytelling, interactive experiences, reviews, usability, evidence, and artifacts. Each other skill has three focused guides. None requires another installed skill.
+The UI design skill has twelve guides covering direction, visual composition, reconstruction, media, image-led work, motion, scroll storytelling, interactive experiences, reviews, usability, evidence, and artifacts. The other nine original skills have three guides each. The UI engineer skill adds six guides and seven templates for frontend CI/CD and bounded gh-aw automation. None requires another installed skill.
 
 ## Verification and Honest Delivery
 

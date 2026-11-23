@@ -1,0 +1,4 @@
+import { defineWorkflow, joinSession } from "@microsoft/copilot-sdk/extension";
+import { uiReview } from "./workflow.mjs";
+
+await joinSession({ workflows: [defineWorkflow(uiReview)] });

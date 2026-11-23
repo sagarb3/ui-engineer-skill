@@ -20,10 +20,10 @@
 </p>
 
 <p align="center">
-  <strong>10 focused skills</strong> &nbsp; / &nbsp;
-  <strong>39 supporting guides</strong> &nbsp; / &nbsp;
-  <strong>50 evaluation cases</strong> &nbsp; / &nbsp;
-  <strong>5 client setup paths</strong>
+  <strong>11 core skills</strong> &nbsp; / &nbsp;
+  <strong>45 supporting guides</strong> &nbsp; / &nbsp;
+  <strong>58 evaluation cases</strong> &nbsp; / &nbsp;
+  <strong>3 installable plugins</strong>
 </p>
 
 **[View the website](https://sagarb3.github.io/ui-engineer-skill/)** · [Standalone HTML file](README.html)
@@ -60,7 +60,7 @@ copilot plugin marketplace add sagarb3/ui-engineer-skill
 copilot plugin install ui-engineer@ui-engineer-skills
 ```
 
-Start a new session and request a skill by name. This installs the ten core skills with their supporting resources. No application dependencies are added.
+Start a new session and request a skill by name. This installs the eleven core skills with their supporting resources. No application dependencies are added.
 
 Try a focused request in your application repository:
 
@@ -93,11 +93,11 @@ Choose the packages your team needs. The core React library stays independent of
 
 | Plugin | Included | Install |
 | --- | --- | --- |
-| **UI Engineer** | Ten React UI and practical Git skills, 39 guides, and worked examples | `copilot plugin install ui-engineer@ui-engineer-skills` |
+| **UI Engineer** | Eleven UI engineering and practical Git skills, 45 guides, and worked examples | `copilot plugin install ui-engineer@ui-engineer-skills` |
 | [GitHub Repository](plugins/github-repository/README.md) | Repository engineering skill, reference material, templates, schemas, and Python validators | `copilot plugin install github-repository@ui-engineer-skills` |
 | [Agentic Workflows](plugins/agentic-workflows/README.md) | Workflow routing skill and an explicitly selected Copilot agent | `copilot plugin install agentic-workflows@ui-engineer-skills` |
 
-With all three installed, the collection supplies **12 skills and one native Copilot agent**. Each optional package includes two practical use cases and five review scenarios. Browse and update through the CLI:
+With all three installed, the collection supplies **13 skills and one native Copilot agent**. Each optional package includes two practical use cases and five review scenarios. Browse and update through the CLI:
 
 ```sh
 copilot plugin marketplace browse ui-engineer-skills
@@ -136,6 +136,7 @@ The optional packages adapt MIT-licensed material from [he8um/github-skills](htt
 
 | Skill | What it brings to the workflow |
 | --- | --- |
+| [UI engineer](skills/ui-engineer/SKILL.md) | Frontend CI/CD, secure gh-aw authoring, dynamic workflow opt-in, and everyday UI delivery |
 | [Harness](skills/harness/SKILL.md) | A baseline for scope, clarification, ownership, verification, and delivery |
 | [UI design direction](skills/ui-design-direction/SKILL.md) | Product-specific concepts, composition, responsive reconstruction, media, motion, and review |
 | [React component practices](skills/react-component-practices/SKILL.md) | Clear state ownership, pure rendering, correct effects, identity, and async lifecycle |
@@ -149,11 +150,41 @@ The optional packages adapt MIT-licensed material from [he8um/github-skills](htt
 
 Each skill is self-contained. Its `SKILL.md` routes relevant work to local guides, and `references.json` makes those guides discoverable to tooling. Copy the whole folder; no companion skill is required.
 
-The UI design skill includes twelve specialist guides, from [concept exploration](skills/ui-design-direction/guides/design-brief-and-exploration.md) and [scroll storytelling](skills/ui-design-direction/guides/scroll-storytelling.md) to [visual review](skills/ui-design-direction/guides/visual-review.md) and [usability walkthroughs](skills/ui-design-direction/guides/usability-walkthrough.md). Each other skill has three focused guides.
+The UI design skill includes twelve specialist guides, from [concept exploration](skills/ui-design-direction/guides/design-brief-and-exploration.md) and [scroll storytelling](skills/ui-design-direction/guides/scroll-storytelling.md) to [visual review](skills/ui-design-direction/guides/visual-review.md) and [usability walkthroughs](skills/ui-design-direction/guides/usability-walkthrough.md). The other nine original skills each have three focused guides. The new [UI engineer skill](skills/ui-engineer/README.md) adds six guides and seven template files covering deterministic CI, previews, bounded gh-aw maintenance, and experimental dynamic extension packaging.
+
+## UI engineering from component to pipeline
+
+The self-contained [ui-engineer skill](skills/ui-engineer/README.md) combines deterministic UI CI, Storybook/Playwright, previews, repository audits, and bounded gh-aw automation. It includes a focused entry point, six guides, seven template files, two worked examples, pinned research notes, and eight evaluation scenarios.
+
+```text
+Use ui-engineer to audit packages/ui and apps/web CI. Preserve our
+package manager and required check names. Fix fork and path-filter
+risks, define Storybook/Playwright coverage, and propose a bounded
+Copilot CI Doctor workflow. Compile if tools are available; do not
+run inference or deploy without the applicable authorization.
+```
+
+Synthesized from [github/gh-aw](https://github.com/github/gh-aw), [githubnext/agentics](https://github.com/githubnext/agentics), and [he8um/github-skills](https://github.com/he8um/github-skills). See the [source and compiler record](skills/ui-engineer/guides/sources.md). Experimental Copilot dynamic extensions are separately opted into; ordinary gh-aw authoring does not require them.
 
 ## Skill examples
 
 Choose a scenario and copy its prompt into a session with the named skill installed. Replace illustrative paths and component names with your application. Every core skill includes two worked scenarios, linked below, with inputs, expected deliverables, and verification. The examples describe intended behavior, not evaluation results or checks already executed.
+
+<details>
+<summary><strong>UI engineer: secure frontend CI and add bounded CI Doctor</strong></summary>
+
+**Use case:** A UI workspace needs reliable required checks, safe previews, and evidence-backed CI failure diagnosis.
+
+```text
+Use ui-engineer to review UI CI, including shared tokens and docs-only
+changes. Preserve required checks and fork safety. Propose CI Doctor
+with read-only investigation, one deduplicated safe output, and clear
+no-op conditions. Compile source plus lock when available. Do not dispatch.
+```
+
+**Expect:** A scoped CI correction, explicit preview prerequisites, bounded gh-aw source and compiler evidence, with hosted results kept separate. [Full examples](skills/ui-engineer/examples.md).
+
+</details>
 
 <details>
 <summary><strong>Harness: preserve a draft after a failed save</strong></summary>
@@ -354,7 +385,7 @@ All content is in English. These are working instructions; enforcement and data 
 
 ## Evaluate before you roll out
 
-Fifty cases cover normal work, ambiguity, scope, safeguards, activation, and multi-turn behavior. Local fixtures and explicit review criteria make the expected standard inspectable before adoption.
+Fifty-eight cases cover normal work, ambiguity, scope, safeguards, activation, and multi-turn behavior. Local fixtures and explicit review criteria make the expected standard inspectable before adoption.
 
 The evaluation tool prepares separate baseline and with-skill workspaces. Reviewers record observed evidence; new cases begin as `unverified`, and incomplete evidence cannot produce a passing result.
 
@@ -362,6 +393,7 @@ The evaluation tool prepares separate baseline and with-skill workspaces. Review
 python3 scripts/evaluate.py validate
 python3 scripts/evaluate.py list
 python3 -m unittest discover -s tests -v
+node --test tests/ui-engineer-dynamic.test.mjs
 ```
 
 Evaluation tooling requires Python 3.9+ and Git; skill installation does not. The tool does not launch model sessions or make paid calls. Structural validation and tooling tests are separate from behavioral skill evaluation. Live-model benchmark results are not currently published.

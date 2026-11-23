@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ui-engineer",
-  "version": "0.1.0",
-  "description": "React UI engineering skills for design, implementation, accessibility, testing, performance, and Git.",
+  "version": "0.2.0",
+  "description": "React UI engineering, secure frontend CI/CD, gh-aw workflows, accessibility, testing, performance, and Git.",
   "author": {
     "name": "Sagar Bhattacharya",
     "url": "https://github.com/sagarb3"
@@ -14,6 +14,8 @@
     "ui",
     "accessibility",
     "vitest",
-    "git"
+    "git",
+    "github-actions",
+    "gh-aw"
   ]
 }

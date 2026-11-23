@@ -1,0 +1,14 @@
+# Intentionally unsafe review fixture; this nested file is not an active workflow.
+name: Unsafe preview fixture
+on: pull_request_target
+permissions: write-all
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - run: npm install && npm run deploy
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
