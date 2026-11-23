@@ -11,6 +11,7 @@
 </p>
 
 <p align="center">
+  <a href="https://sagarb3.github.io/ui-engineer-skill/">Website</a> &nbsp; / &nbsp;
   <a href="#quick-start">Get started</a> &nbsp; / &nbsp;
   <a href="#the-skill-library">Explore the skills</a> &nbsp; / &nbsp;
   <a href="#skill-examples">Try the examples</a> &nbsp; / &nbsp;
@@ -25,7 +26,7 @@
   <strong>5 client setup paths</strong>
 </p>
 
-[Standalone HTML edition](README.html) — download and open in a browser.
+**[View the website](https://sagarb3.github.io/ui-engineer-skill/)** · [Standalone HTML file](README.html)
 
 ## Shared standards. Applied where the work happens.
 
