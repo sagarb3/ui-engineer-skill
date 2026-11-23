@@ -25,6 +25,8 @@
   <strong>5 client setup paths</strong>
 </p>
 
+[Standalone HTML edition](README.html) — download and open in a browser.
+
 ## Shared standards. Applied where the work happens.
 
 Teams already have components, review expectations, accessibility requirements, and delivery controls. This collection helps coding tools work within those conventions, from the first design decision to the final Git operation.

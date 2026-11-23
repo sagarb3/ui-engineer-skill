@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practical React UI engineering skills and Git tooling. Install versioned GitHub Copilot CLI plugins, explore examples, and evaluate before team adoption.">
+  <meta name="theme-color" content="#101e31">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23101e31'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='sans-serif' font-size='18' font-weight='700' fill='%23b4f1d0'%3EUI%3C/text%3E%3C/svg%3E">
+  <title>UI Engineer Skills — React UI and Git Workflows</title>
+  <style>
+:root { color-scheme: light; --ink:#14283c; --muted:#526277; --paper:#f5f7f9; --line:#d9e1e8; --green:#b4f1d0; --navy:#101e31; --link:#155b91; }
+* { box-sizing:border-box; }
+html { scroll-padding-top:6rem; }
+body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+a { color:var(--link); text-underline-offset:.2em; }
+a:hover { text-decoration-thickness:2px; }
+a:focus-visible,summary:focus-visible,[tabindex]:focus-visible { outline:3px solid #247ab5; outline-offset:5px; border-radius:3px; }
+.skip-link { position:fixed; top:-5rem; left:1rem; z-index:5; background:white; padding:.7rem 1rem; }
+.skip-link:focus { top:.5rem; }
+.site-header { position:sticky; top:0; z-index:3; background:#fffffff5; border-bottom:1px solid var(--line); }
+.header-inner { max-width:1320px; margin:auto; padding:1rem 2.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.brand { display:flex; align-items:center; gap:.7rem; color:var(--ink); font-weight:750; text-decoration:none; letter-spacing:-.03em; }
+.brand-mark { display:grid; place-items:center; width:2rem; height:2rem; background:var(--navy); color:var(--green); border-radius:7px; font:700 12px/1 monospace; letter-spacing:-.1em; }
+.header-links { display:flex; align-items:center; gap:1.4rem; font-size:.85rem; font-weight:600; }
+.header-links a { text-decoration:none; }
+.hero { background:var(--navy); color:#f5f8fc; }
+.hero-inner { max-width:1320px; margin:auto; padding:5rem 2.5rem 4rem; display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:center; }
+.eyebrow { margin:0 0 1.2rem; color:var(--green); font-size:.73rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; }
+h1 { margin:0 0 1.3rem; font-size:clamp(2.5rem,4.6vw,4.4rem); line-height:1.06; letter-spacing:-.055em; max-width:12ch; }
+.hero-description { color:#c7d4e3; font-size:1.1rem; max-width:43ch; }
+.hero-description strong { color:white; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.8rem; }
+.button { padding:.7rem 1.1rem; border:1px solid #687e96; border-radius:6px; color:white; font-weight:650; text-decoration:none; font-size:.9rem; }
+.button-primary { color:#102b24; background:var(--green); border-color:var(--green); }
+.terminal { min-width:0; border:1px solid #3c5069; border-radius:10px; overflow:hidden; background:#0a1525; box-shadow:0 24px 60px #0003; }
+.terminal-label { padding:.8rem 1.2rem; border-bottom:1px solid #2d4057; color:#b5c9de; font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.terminal pre { background:none; border:0; margin:0; padding:1.5rem; color:#d5e7f8; font-size:12px; }
+.terminal pre code { font-size:inherit; white-space:pre-wrap; overflow-wrap:anywhere; }
+.terminal-note { padding:0 1.5rem 1.4rem; margin:0; color:#a9c5b9; font-size:.8rem; }
+.stats { max-width:1320px; margin:auto; padding:0 2.5rem 2rem; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+.stat { border-top:1px solid #3c5069; padding-top:1rem; color:#b5c4d6; font-size:.8rem; }
+.stat strong { display:block; color:white; font-size:1.65rem; letter-spacing:-.04em; }
+.layout { display:grid; grid-template-columns:210px minmax(0,1fr); gap:3rem; max-width:1320px; margin:auto; padding:3.5rem 2.5rem 5rem; }
+.sidebar { position:sticky; top:6rem; align-self:start; font-size:.82rem; }
+.sidebar-title { margin:0 0 .75rem; text-transform:uppercase; color:var(--muted); font-size:.65rem; font-weight:750; letter-spacing:.12em; }
+.sidebar a { display:block; padding:.45rem 0; text-decoration:none; color:var(--muted); }
+.sidebar a:hover { color:var(--link); }
+.sidebar-note { padding-top:1.2rem; margin-top:1.2rem; border-top:1px solid var(--line); color:var(--muted); font-size:.75rem; }
+article { min-width:0; }
+.content-section { padding:0 0 2.8rem; margin:0 0 2.8rem; border-bottom:1px solid var(--line); }
+.content-section:last-child { border:0; margin-bottom:0; padding-bottom:0; }
+h2 { font-size:clamp(1.65rem,2.5vw,2.1rem); line-height:1.2; letter-spacing:-.04em; margin:0 0 1.2rem; }
+h3 { font-size:1.2rem; letter-spacing:-.025em; margin:2rem 0 .7rem; }
+p { margin:0 0 1.2rem; }
+li { padding-left:.2rem; margin-bottom:.65rem; }
+code { font: .85em/1.6 ui-monospace,SFMono-Regular,Consolas,monospace; background:#e8eef3; padding:.15em .3em; border-radius:3px; overflow-wrap:anywhere; }
+pre { max-width:100%; overflow-x:auto; padding:1.25rem; background:#101e31; color:#e7f0fb; border:1px solid #26394f; border-radius:7px; line-height:1.7; }
+pre code { padding:0; border:0; color:inherit; background:none; overflow-wrap:normal; font-size:.8rem; }
+.table-scroll { max-width:100%; overflow-x:auto; margin:1.4rem 0; background:white; border:1px solid var(--line); border-radius:8px; }
+table { border-collapse:collapse; width:100%; font-size:.87rem; text-align:left; }
+th { background:#eaf0f5; font-size:.73rem; letter-spacing:.04em; }
+th,td { padding:1rem; vertical-align:top; border-bottom:1px solid var(--line); min-width:160px; }
+tr:last-child td { border-bottom:0; }
+td p:last-child { margin-bottom:0; }
+td code { white-space:normal; }
+details { background:white; border:1px solid var(--line); border-radius:7px; padding:0 1.1rem; margin:1rem 0; }
+summary { cursor:pointer; padding:1.05rem 0; line-height:1.5; }
+details[open] summary { margin-bottom:1rem; border-bottom:1px solid var(--line); }
+details pre { margin-bottom:1.2rem; }
+hr { border:0; border-top:1px solid var(--line); margin:2rem 0; }
+.site-footer { background:white; border-top:1px solid var(--line); padding:1.5rem 2.5rem; font-size:.8rem; color:var(--muted); text-align:center; }
+@media(max-width:1000px) { .hero-inner { gap:2rem; } .layout { grid-template-columns:170px minmax(0,1fr); gap:2rem; } }
+@media(max-width:760px) { .header-inner { padding:1rem 1.2rem; } .header-links { gap:.8rem; } .header-links .desktop-link { display:none; } .hero-inner { grid-template-columns:1fr; padding:3rem 1.2rem 2rem; gap:2rem; } h1 { max-width:15ch; } .stats { padding:0 1.2rem 2rem; grid-template-columns:repeat(2,1fr); } .layout { display:block; padding:2.5rem 1.2rem; } .sidebar { position:static; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--line); } .sidebar nav { display:flex; flex-wrap:wrap; gap:0 1.2rem; } .sidebar-note { display:none; } .terminal pre { font-size:11px; padding:1rem; } .content-section { padding-bottom:2rem; margin-bottom:2rem; } th,td { padding:.8rem; } }
+@media print { .site-header,.sidebar,.hero-actions,.site-footer,.terminal { display:none; } .hero { background:white; color:black; } .hero-inner,.layout { display:block; padding:1rem 0; } .hero-description,.eyebrow,.stat,.stat strong { color:black; } .stats { padding:1rem 0; } pre { white-space:pre-wrap; color:black; background:white; } .table-scroll { overflow:visible; } th,td { min-width:0; } details { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">UI</span>UI Engineer Skills</a>
+    <nav class="header-links" aria-label="Primary">
+      <a class="desktop-link" href="#the-skill-library">Skills</a>
+      <a href="#quick-start">Install</a>
+      <a href="https://github.com/sagarb3/ui-engineer-skill">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+  <div class="hero" id="top">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">React UI · Git tooling · Agent skills</p>
+        <h1>Consistent UI.<br>Reviewable delivery.</h1>
+        <p class="hero-description"><strong>Give every UI change a shared engineering standard.</strong> Practical, versioned workflows for design, implementation, accessibility, testing, and Git.</p>
+        <p class="hero-description">Built for GitHub Copilot CLI, with portable skills for Cursor, Codex, Claude Code, and OpenCode.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#quick-start">Install the skills</a><a class="button" href="#skill-examples">Explore use cases</a></div>
+      </div>
+      <div class="terminal" aria-label="Copilot CLI installation commands">
+        <div class="terminal-label">GitHub Copilot CLI / quick start</div>
+        <pre><code>copilot plugin marketplace add sagarb3/ui-engineer-skill
+copilot plugin install ui-engineer@ui-engineer-skills</code></pre>
+        <p class="terminal-note">Ten core skills. Optional packages install separately.</p>
+      </div>
+    </div>
+    <div class="stats" aria-label="Core collection contents">
+      <div class="stat"><strong>10</strong>focused core skills</div>
+      <div class="stat"><strong>39</strong>supporting guides</div>
+      <div class="stat"><strong>50</strong>core evaluation cases</div>
+      <div class="stat"><strong>3</strong>versioned plugins</div>
+    </div>
+  </div>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Page navigation">
+      <p class="sidebar-title">In this guide</p>
+      <nav aria-label="Contents">
+        <a href="#quick-start">Quick start</a>
+        <a href="#copilot-cli-marketplace">Plugin marketplace</a>
+        <a href="#the-skill-library">Skill library</a>
+        <a href="#skill-examples">Skill examples</a>
+        <a href="#agent-role-examples">Agent use cases</a>
+        <a href="#an-operating-model-teams-can-review">Operating model</a>
+        <a href="#evaluate-before-you-roll-out">Evaluations</a>
+        <a href="#bring-it-into-your-team">Team adoption</a>
+        <a href="#project-origins">Sources and provenance</a>
+      </nav>
+      <p class="sidebar-note">Plain files. Reviewable instructions. Your repository's conventions.</p>
+    </aside>
+    <article aria-label="UI Engineer Skills documentation">
+<section class="content-section"><h2 id="shared-standards-applied-where-the-work-happens">Shared standards. Applied where the work happens.</h2>
+<p>Teams already have components, review expectations, accessibility requirements, and delivery controls. This collection helps coding tools work within those conventions, from the first design decision to the final Git operation.</p>
+<p>Each skill provides a practical process, decision rules, failure cases, and verification criteria. Detailed guides load according to the task. Everything lives in ordinary, reviewable repository files.</p>
+<div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>Consistency across contributors</strong><br><br>
+      Reuse existing tokens, components, state ownership, and project conventions. Make important decisions explicit before implementation.
+    </td>
+    <td width="33%" valign="top">
+      <strong>Changes reviewers can assess</strong><br><br>
+      Prefer small, complete changes with clear scope, preserved behavior, and practical Git workflows.
+    </td>
+    <td width="33%" valign="top">
+      <strong>Evidence behind the handoff</strong><br><br>
+      Match verification to the claim. Separate passing tests, browser observations, performance measurements, and unverified assumptions.
+    </td>
+  </tr>
+</table></div>
+
+</section>
+<section class="content-section"><h2 id="quick-start">Quick start</h2>
+<p>Install through the GitHub Copilot CLI plugin marketplace:</p>
+<pre><code class="language-sh">copilot plugin marketplace add sagarb3/ui-engineer-skill
+copilot plugin install ui-engineer@ui-engineer-skills
+</code></pre>
+<p>Start a new session and request a skill by name. This installs the ten core skills with their supporting resources. No application dependencies are added.</p>
+<p>Try a focused request in your application repository:</p>
+<pre><code class="language-text">Use harness and react-accessibility to review the checkout form.
+Identify keyboard, focus, and labeling barriers. Do not edit files.
+</code></pre>
+<p>For team distribution, copy approved skill folders into the application's <code>.github/skills/</code> directory. Pin a reviewed revision and preserve existing project instructions. A discovered skill does not automatically become the baseline for every task.</p>
+<p><strong><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/installation.md">Full installation and activation guide</a></strong></p>
+<details>
+<summary><strong>Use Cursor, Codex, Claude Code, or OpenCode</strong></summary>
+<div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Client</th>
+<th>Project skills</th>
+<th>Personal skills</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cursor</td>
+<td><code>.cursor/skills/</code></td>
+<td><code>~/.cursor/skills/</code></td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><code>.agents/skills/</code></td>
+<td><code>~/.agents/skills/</code></td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><code>.claude/skills/</code></td>
+<td><code>~/.claude/skills/</code></td>
+</tr>
+<tr>
+<td>OpenCode</td>
+<td><code>.opencode/skills/</code></td>
+<td><code>~/.config/opencode/skills/</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>Copy complete skill folders, including guides and metadata, then verify discovery in the installed client. See the <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/installation.md#other-supported-clients">installation guide</a> for invocation details and official documentation. Live behavior must be verified against the host and version your team uses.</p>
+</details>
+</section>
+<section class="content-section"><h2 id="copilot-cli-marketplace">Copilot CLI marketplace</h2>
+<p>Choose the packages your team needs. The core React library stays independent of the optional repository and workflow tools.</p>
+<div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Included</th>
+<th>Install</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UI Engineer</strong></td>
+<td>Ten React UI and practical Git skills, 39 guides, and worked examples</td>
+<td><code>copilot plugin install ui-engineer@ui-engineer-skills</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/plugins/github-repository/README.md">GitHub Repository</a></td>
+<td>Repository engineering skill, reference material, templates, schemas, and Python validators</td>
+<td><code>copilot plugin install github-repository@ui-engineer-skills</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/plugins/agentic-workflows/README.md">Agentic Workflows</a></td>
+<td>Workflow routing skill and an explicitly selected Copilot agent</td>
+<td><code>copilot plugin install agentic-workflows@ui-engineer-skills</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>With all three installed, the collection supplies <strong>12 skills and one native Copilot agent</strong>. Each optional package includes two practical use cases and five review scenarios. Browse and update through the CLI:</p>
+<pre><code class="language-sh">copilot plugin marketplace browse ui-engineer-skills
+copilot plugin marketplace update ui-engineer-skills
+copilot plugin update ui-engineer
+</code></pre>
+<p>Update installed add-ons by their own names. See <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/plugin-maintenance.md">plugin maintenance</a> for versioning, validation, upstream updates, and rollback. This is a repository-hosted marketplace; it does not claim GitHub endorsement or inclusion in the built-in catalog.</p>
+<h3 id="optional-package-examples">Optional package examples</h3>
+<p><strong>Repository engineering:</strong> install <code>github-repository</code>, then ask:</p>
+<pre><code class="language-text">Use github-skills to review this repository's contribution and release
+workflow. Inspect existing files first. Propose a minimal blueprint and
+validate it with the bundled helper. Do not publish settings or releases.
+</code></pre>
+<p>The <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/plugins/github-repository/README.md#use-cases">repository package examples</a> include a repository blueprint and CI review. The helpers require Python 3.10+; YAML-related helpers additionally need PyYAML, as documented in the package.</p>
+<p><strong>Workflow engineering:</strong> install <code>agentic-workflows</code>, start a new session, and use <code>/agent</code> to select <code>agentic-workflows</code>:</p>
+<pre><code class="language-text">Design a manually triggered CI health report using agentic-workflows.
+Review existing workflows and propose the local source. Ask about any
+missing destination or permissions before implementing. Do not trigger
+a hosted run or configure secrets.
+</code></pre>
+<p>The <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/plugins/agentic-workflows/README.md#use-cases">workflow package examples</a> cover creation and debugging. The agent is explicitly selected (<code>infer: false</code>). Remote guidance, gh-aw tooling, authentication, and engine configuration are separate prerequisites; installation does not configure or run them.</p>
+<p>The optional packages adapt MIT-licensed material from <a href="https://github.com/he8um/github-skills">he8um/github-skills</a> and <a href="https://github.com/githubnext/agentics">githubnext/agentics</a>. Exact upstream revisions, local changes, and preserved licenses are recorded in <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/THIRD_PARTY_NOTICES.md">third-party notices</a> and the <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/third-party/sources.json">source lock</a>.</p>
+</section>
+<section class="content-section"><h2 id="the-skill-library">The skill library</h2>
+<div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>What it brings to the workflow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/harness/SKILL.md">Harness</a></td>
+<td>A baseline for scope, clarification, ownership, verification, and delivery</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/SKILL.md">UI design direction</a></td>
+<td>Product-specific concepts, composition, responsive reconstruction, media, motion, and review</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/react-component-practices/SKILL.md">React component practices</a></td>
+<td>Clear state ownership, pure rendering, correct effects, identity, and async lifecycle</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/component-api-design/SKILL.md">Component API design</a></td>
+<td>Understandable props, valid states, composition, and consumer compatibility</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/design-system-consistency/SKILL.md">Design system consistency</a></td>
+<td>Existing tokens, components, variants, themes, and visual-regression discipline</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/react-accessibility/SKILL.md">React accessibility</a></td>
+<td>Semantic controls, form feedback, keyboard interaction, focus, and honest audits</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/vitest-react-testing/SKILL.md">Vitest + React Testing Library</a></td>
+<td>Behavior-focused scenarios, meaningful assertions, deterministic async work, and mock boundaries</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/react-ui-performance/SKILL.md">React UI performance</a></td>
+<td>Reproducible diagnosis, targeted changes, and comparable before-and-after evidence</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/git-tooling/SKILL.md">Git tooling</a></td>
+<td>Direct routine commands, protected user work, and explicit history-changing boundaries</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/trim-mode/SKILL.md">Trim mode</a></td>
+<td>Smaller complete implementations and concise replies when explicitly requested</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each skill is self-contained. Its <code>SKILL.md</code> routes relevant work to local guides, and <code>references.json</code> makes those guides discoverable to tooling. Copy the whole folder; no companion skill is required.</p>
+<p>The UI design skill includes twelve specialist guides, from <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/design-brief-and-exploration.md">concept exploration</a> and <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/scroll-storytelling.md">scroll storytelling</a> to <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/visual-review.md">visual review</a> and <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/guides/usability-walkthrough.md">usability walkthroughs</a>. Each other skill has three focused guides.</p>
+</section>
+<section class="content-section"><h2 id="skill-examples">Skill examples</h2>
+<p>Choose a scenario and copy its prompt into a session with the named skill installed. Replace illustrative paths and component names with your application. Every core skill includes two worked scenarios, linked below, with inputs, expected deliverables, and verification. The examples describe intended behavior, not evaluation results or checks already executed.</p>
+<details>
+<summary><strong>Harness: preserve a draft after a failed save</strong></summary>
+<p><strong>Use case:</strong> A local bug fix must preserve existing architecture and unrelated work.</p>
+<pre><code class="language-text">Use harness. Fix the profile editor so a rejected save keeps the entered
+display name, shows the existing inline error, and allows retry. Preserve
+successful saves and public props. Reuse the current request layer,
+add a focused regression test, and report checks actually run. Do not push.
+</code></pre>
+<p><strong>Expect:</strong> A scoped correction, retained input, regression evidence, and honest verification limits. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/harness/examples.md">Full examples</a>.</p>
+</details>
+<details>
+<summary><strong>Git tooling: commit a fix without including unrelated work</strong></summary>
+<p><strong>Use case:</strong> A reviewed component and test are ready, but another draft is still in progress.</p>
+<pre><code class="language-text">Use git-tooling. Commit only the named search component and regression
+test with &quot;Fix search clear behavior&quot;. Inspect pre-existing staged work,
+preserve unrelated changes, and ask if the index cannot be separated
+unambiguously. Report the commit and remaining state. Do not push.
+</code></pre>
+<p><strong>Expect:</strong> Only the authorized files in the commit, with other work preserved. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/git-tooling/examples.md">Full examples</a>.</p>
+</details>
+<details>
+<summary><strong>Trim mode: add an accessible search clear action</strong></summary>
+<p><strong>Use case:</strong> A small interaction needs a complete fix without another dependency or state layer.</p>
+<pre><code class="language-text">Use trim-mode. Add a clear action to ProductSearch using the existing
+button primitive. Clearing should restore all results and keep focus
+in the input. Preserve accessible naming, verify the behavior, and
+keep the implementation and response small.
+</code></pre>
+<p><strong>Expect:</strong> Existing primitives, correct focus and results, retained safeguards, and a concise handoff. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/trim-mode/examples.md">Full examples</a>.</p>
+</details>
+<details>
+<summary><strong>UI design direction: make inventory exceptions actionable</strong></summary>
+<p><strong>Use case:</strong> A decorative opening pushes the actual work below the first viewport.</p>
+<pre><code class="language-text">Use ui-design-direction to redesign the inventory workspace around
+low-stock exceptions and restock actions. Preserve the brand,
+navigation, and component library. Define responsive behavior and
+loading, empty, failure, and retry states. Implement the agreed scope
+and inspect the rendered layout and main path where tools permit.
+</code></pre>
+<p><strong>Expect:</strong> A product-specific hierarchy, usable states, and separate visual and task-completion evidence. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/ui-design-direction/examples.md">Full examples</a>.</p>
+</details>
+<details>
+<summary><strong>React component practices: fix stale results and item identity</strong></summary>
+<p><strong>Use case:</strong> Copied result state and index keys break search updates and reordering.</p>
+<pre><code class="language-text">Use react-component-practices to fix ProjectResults. Derive visible
+items from the current projects and query without duplicated state,
+use stable project IDs, and preserve the existing matching contract,
+public props, and empty state. Verify query and ordering changes.
+</code></pre>
+<p><strong>Expect:</strong> One clear state owner, current results, stable identity, and focused checks. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/react-component-practices/examples.md">Full examples</a>.</p>
+</details>
+<details>
+<summary><strong>Vitest + React Testing Library: cover rejection and retry</strong></summary>
+<p><strong>Use case:</strong> A save form needs behavior coverage that catches lost drafts.</p>
+<pre><code class="language-text">Use vitest-react-testing to test RenameForm. Edit the project name,
+submit, reject the save, and assert the error and retained draft.
+Retry successfully and verify the exact callback value. Use real
+controls, accessible queries, awaited user-event, and controlled
+promises. Keep production code unchanged.
+</code></pre>
+<p><strong>Expect:</strong> Deterministic public-behavior tests, with executed results distinguished from generated files. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/vitest-react-testing/examples.md">Full examples</a>.</p>
+</details>
+<details>
+<summary><strong>React accessibility: repair dialog keyboard behavior</strong></summary>
+<p><strong>Use case:</strong> A dialog opens visually but leaves focus behind or loses it on closing.</p>
+<pre><code class="language-text">Use react-accessibility to repair the checkout delivery dialog with
+the existing accessible primitive. Verify naming, initial focus,
+containment, dismissal, restoration, and long-content visibility.
+Preserve checkout behavior. Report browser and assistive-technology
+checks that were run and those still unverified.
+</code></pre>
+<p><strong>Expect:</strong> A usable real interaction, accurate semantics, and evidence appropriate to the claim. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/react-accessibility/examples.md">Full examples</a>.</p>
+</details>
+<details>
+<summary><strong>Design system consistency: align a one-off settings action</strong></summary>
+<p><strong>Use case:</strong> A screen bypasses the canonical control with a custom palette and spacing.</p>
+<pre><code class="language-text">Use design-system-consistency to align the settings save action with
+ActionButton and active semantic tokens. Preserve submission, focus,
+disabled, and error behavior. Check supported themes. Keep the change
+local and do not alter shared defaults or add another button system.
+</code></pre>
+<p><strong>Expect:</strong> Reuse of current components and tokens without a global visual migration. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/design-system-consistency/examples.md">Full examples</a>.</p>
+</details>
+<details>
+<summary><strong>React UI performance: diagnose slow filtering with evidence</strong></summary>
+<p><strong>Use case:</strong> A large inventory feels slow, and the bottleneck has not yet been established.</p>
+<pre><code class="language-text">Use react-ui-performance to investigate slow inventory filtering with
+representative data. Record comparable runtime conditions and identify
+the dominant cost before editing. Make the narrowest justified change,
+preserve matching and selection, and repeat the measurement. Label any
+unmeasured hypothesis; do not blanket-memoize the application.
+</code></pre>
+<p><strong>Expect:</strong> A supported diagnosis and honest before-and-after evidence, with correctness preserved. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/react-ui-performance/examples.md">Full examples</a>.</p>
+</details>
+<details>
+<summary><strong>Component API design: make field ownership explicit</strong></summary>
+<p><strong>Use case:</strong> A shared field mixes controlled and uncontrolled behavior and loses valid empty strings.</p>
+<pre><code class="language-text">Use component-api-design to review TextField and its consumers. Define
+valid controlled and uncontrolled modes, preserve controlled empty
+strings, callback arguments, and native attributes. Ask about reset
+behavior and compatibility before changing callers. Add only the API
+surface needed by current use cases.
+</code></pre>
+<p><strong>Expect:</strong> A clear ownership contract, explicit compatibility impact, and representative consumer checks. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/skills/component-api-design/examples.md">Full examples</a>.</p>
+</details>
+</section>
+<section class="content-section"><h2 id="agent-role-examples">Agent role examples</h2>
+<p>These are role-based prompts for ordinary sessions using installed skills. These six UI specialist roles are examples, not bundled native profiles. The optional Agentic Workflows package supplies a separate, explicitly selected native agent. Naming a role does not create an independent execution context or change permissions.</p>
+<div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Role and use case</th>
+<th>Copyable starting prompt</th>
+<th>Expected handoff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/agent-use-cases.md#ui-architect">UI architect</a>: plan a workspace before implementation</td>
+<td><code>Act as a UI architect. Use ui-design-direction and component-api-design to plan the inventory layout, responsive states, and public contracts. Preserve brand and current primitives; do not edit code.</code></td>
+<td>Concrete design and API decisions, reuse choices, and unresolved questions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/agent-use-cases.md#react-builder">React builder</a>: implement an approved slice</td>
+<td><code>Act as a React builder. Use harness, react-component-practices, and design-system-consistency to implement the approved inventory plan with recovery states. Run relevant checks and keep the diff scoped.</code></td>
+<td>Complete accepted behavior, changed files, actual checks, and limits</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/agent-use-cases.md#test-engineer">Test engineer</a>: protect a save interaction</td>
+<td><code>Act as a test engineer. Use vitest-react-testing to cover pending save, rejection, retained draft, and retry with real controls and controlled promises. Do not change production code.</code></td>
+<td>Behavior tests, their protected contract, and observed execution results</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/agent-use-cases.md#ui-reviewer">UI reviewer</a>: assess the rendered result</td>
+<td><code>Act as a UI reviewer. Use ui-design-direction and react-accessibility to inspect hierarchy, reading, keyboard behavior, focus, and recovery without editing. Separate evidence from assumptions.</code></td>
+<td>Ranked findings with location, impact, evidence, correction, and coverage limits</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/agent-use-cases.md#performance-auditor">Performance auditor</a>: find the slow path</td>
+<td><code>Act as a performance auditor. Use react-ui-performance to reproduce the filter delay, distinguish browser and request costs, and recommend a measured correction. Keep the investigation read-only.</code></td>
+<td>Supported bottleneck, baseline, recommendation, tradeoffs, and validation plan</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/agent-use-cases.md#git-operator">Git operator</a>: commit approved files safely</td>
+<td><code>Act as a Git operator. Use git-tooling to commit only the named fix and test with the agreed message, preserving unrelated staged and unstaged work. Do not push or rewrite history.</code></td>
+<td>Intended commit, preserved user work, and accurate repository state</td>
+</tr>
+</tbody>
+</table></div>
+<p>See <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/agent-use-cases.md">complete agent use cases</a> for required inputs, detailed prompts, review boundaries, and a team handoff example. Use only the roles the task needs; a small fix does not need a team of agents.</p>
+</section>
+<section class="content-section"><h2 id="an-operating-model-teams-can-review">An operating model teams can review</h2>
+<div class="table-scroll" role="region" aria-label="Scrollable reference table" tabindex="0"><table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Expected behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scope discipline</td>
+<td>Make the smallest complete change. Preserve existing architecture and unrelated work.</td>
+</tr>
+<tr>
+<td>Clear decisions</td>
+<td>Investigate repository facts directly. Ask before implementing unresolved requirements.</td>
+</tr>
+<tr>
+<td>Practical Git</td>
+<td>Run straightforward authorized commands directly. Obtain exact approval for destructive actions and history rewriting.</td>
+</tr>
+<tr>
+<td>Existing controls</td>
+<td>Keep repository permissions, hooks, signing, review, and branch protection authoritative.</td>
+</tr>
+<tr>
+<td>Accessible delivery</td>
+<td>Preserve validation, error handling, security, and accessibility in every mode.</td>
+</tr>
+<tr>
+<td>Honest evidence</td>
+<td>Report what actually ran, what passed, and what remains unverified.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Output isolation is part of the standard.</strong> Generated code must contain no AI attribution, authoring-tool references, or links back to this collection. Keep workflow metadata out of product code, comments, commits, and documentation. Preserve required legal notices and legitimate ownership records.</p>
+<p>All content is in English. These are working instructions; enforcement and data handling remain the responsibility of the selected host, provider, repository controls, and organizational policies.</p>
+<p><strong><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/operating-model.md">Read the operating model</a></strong></p>
+</section>
+<section class="content-section"><h2 id="evaluate-before-you-roll-out">Evaluate before you roll out</h2>
+<p>Fifty cases cover normal work, ambiguity, scope, safeguards, activation, and multi-turn behavior. Local fixtures and explicit review criteria make the expected standard inspectable before adoption.</p>
+<p>The evaluation tool prepares separate baseline and with-skill workspaces. Reviewers record observed evidence; new cases begin as <code>unverified</code>, and incomplete evidence cannot produce a passing result.</p>
+<pre><code class="language-sh">python3 scripts/evaluate.py validate
+python3 scripts/evaluate.py list
+python3 -m unittest discover -s tests -v
+</code></pre>
+<p>Evaluation tooling requires Python 3.9+ and Git; skill installation does not. The tool does not launch model sessions or make paid calls. Structural validation and tooling tests are separate from behavioral skill evaluation. Live-model benchmark results are not currently published.</p>
+<p><strong><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/evals/README.md">Explore the evaluation suite</a></strong></p>
+</section>
+<section class="content-section"><h2 id="bring-it-into-your-team">Bring it into your team</h2>
+<ol>
+<li><strong>Select a pilot.</strong> Choose a repository, client, and representative tasks. Start with the skills that match the work.</li>
+<li><strong>Review and distribute.</strong> Pin a revision, preserve existing instructions, and use your normal change-control process.</li>
+<li><strong>Evaluate and expand.</strong> Compare actual outputs and evidence before adopting more skills or introducing specialist agents.</li>
+</ol>
+<p>The collection fits into an existing development workflow. It does not add a hosted runtime or application dependency. Organizational permissions, data-handling requirements, and distribution terms still need your team's review.</p>
+<p><strong><a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/enterprise-adoption.md">Team adoption guide</a></strong></p>
+<details>
+<summary><strong>Skills, agent metadata, and specialist agents</strong></summary>
+<p><code>agents/openai.yaml</code> provides skill UI metadata. It does not create or launch a specialist agent. The optional Agentic Workflows plugin supplies one native Copilot profile. The six UI role examples remain ordinary prompts; automatic delegation is not configured.</p>
+<p>See <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/agents.md">the agent guide</a> for role design, host-specific formats, permission boundaries, and evaluation considerations.</p>
+</details>
+<details>
+<summary><strong>Activate the optional trim mode</strong></summary>
+<p>Request <code>trim</code>, <code>be minimal</code>, <code>ponytail</code>, <code>lazy senior</code>, <code>be lazy</code>, or <code>ADHD mode</code> as a working style. Explicitly selecting <code>trim-mode</code> avoids confusion with another installed skill using the same trigger.</p>
+<p>Trim mode checks necessity, reuse, platform support, and existing dependencies before adding minimal code. It keeps responses action-first and short, while preserving accepted requirements, validation, error handling, security, accessibility, and requested explanation depth.</p>
+<p>Say <code>turn off trim mode</code> to return to normal output. <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/installation.md#activate-trim-mode">Activation details</a>.</p>
+</details>
+</section>
+<section class="content-section"><h2 id="project-origins">Project origins</h2>
+<p>Read the <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/initial-prompt.md">original project brief</a> and <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/reference-notes.md">reference notes</a> for the collection's origins. The original ten skills and evaluation tooling were written for this repository. The two optional packages contain reviewed, adapted upstream material with preserved MIT notices; see <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/THIRD_PARTY_NOTICES.md">third-party notices</a>.</p>
+<p>The proposed backdated development timeline is an illustrative reconstruction, not a record of work performed on those dates. See the <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/history-reconstruction.md">history reconstruction record</a> for the actual published commits, assigned timeline, and verification scope.</p>
+<hr />
+<p align="center">
+  <strong>Design deliberately. Build consistently. Verify with evidence.</strong><br>
+  <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/installation.md">Installation</a> &nbsp; / &nbsp;
+  <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/operating-model.md">Operating model</a> &nbsp; / &nbsp;
+  <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/evals/README.md">Evaluations</a> &nbsp; / &nbsp;
+  <a href="https://github.com/sagarb3/ui-engineer-skill/blob/main/docs/enterprise-adoption.md">Team adoption</a>
+</p></section>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">UI Engineer Skills · <a href="https://github.com/sagarb3/ui-engineer-skill">Repository</a> · <a href="README.md">Markdown edition</a></footer>
+</body>
+</html>
