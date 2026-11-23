@@ -397,6 +397,12 @@ Say `turn off trim mode` to return to normal output. [Activation details](docs/i
 
 </details>
 
+## About the maintainer
+
+Built by [Sagar Bhattacharya](https://github.com/sagarb3). This project presents an approach to frontend engineering centered on clear component contracts, accessible interactions, practical tooling, and reviewable evidence.
+
+I’m interested in frontend engineering opportunities where thoughtful UI architecture and practical delivery matter. [Explore the HTML presentation](README.html#about-sagar) for the delivery approach and project evidence, or [visit my GitHub profile](https://github.com/sagarb3) to connect.
+
 ## Project origins
 
 Read the [original project brief](docs/initial-prompt.md) and [reference notes](docs/reference-notes.md) for the collection's origins. The original ten skills and evaluation tooling were written for this repository. The two optional packages contain reviewed, adapted upstream material with preserved MIT notices; see [third-party notices](THIRD_PARTY_NOTICES.md).
