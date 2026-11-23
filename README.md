@@ -13,6 +13,7 @@
 <p align="center">
   <a href="#quick-start">Get started</a> &nbsp; / &nbsp;
   <a href="#the-skill-library">Explore the skills</a> &nbsp; / &nbsp;
+  <a href="#skill-examples">Try the examples</a> &nbsp; / &nbsp;
   <a href="#evaluate-before-you-roll-out">Review the evaluation model</a> &nbsp; / &nbsp;
   <a href="docs/enterprise-adoption.md">Plan a team rollout</a>
 </p>
@@ -103,6 +104,190 @@ Copy complete skill folders, including guides and metadata, then verify discover
 Each skill is self-contained. Its `SKILL.md` routes relevant work to local guides, and `references.json` makes those guides discoverable to tooling. Copy the whole folder; no companion skill is required.
 
 The UI design skill includes twelve specialist guides, from [concept exploration](skills/ui-design-direction/guides/design-brief-and-exploration.md) and [scroll storytelling](skills/ui-design-direction/guides/scroll-storytelling.md) to [visual review](skills/ui-design-direction/guides/visual-review.md) and [usability walkthroughs](skills/ui-design-direction/guides/usability-walkthrough.md). Each other skill has three focused guides.
+
+## Skill examples
+
+Choose a scenario and copy its prompt into a session with the named skill installed. Replace illustrative paths and component names with your application. Every skill includes two worked scenarios, linked below, with inputs, expected deliverables, and verification. The examples describe intended behavior, not evaluation results or checks already executed.
+
+<details>
+<summary><strong>Harness: preserve a draft after a failed save</strong></summary>
+
+**Use case:** A local bug fix must preserve existing architecture and unrelated work.
+
+```text
+Use harness. Fix the profile editor so a rejected save keeps the entered
+display name, shows the existing inline error, and allows retry. Preserve
+successful saves and public props. Reuse the current request layer,
+add a focused regression test, and report checks actually run. Do not push.
+```
+
+**Expect:** A scoped correction, retained input, regression evidence, and honest verification limits. [Full examples](skills/harness/examples.md).
+
+</details>
+
+<details>
+<summary><strong>Git tooling: commit a fix without including unrelated work</strong></summary>
+
+**Use case:** A reviewed component and test are ready, but another draft is still in progress.
+
+```text
+Use git-tooling. Commit only the named search component and regression
+test with "Fix search clear behavior". Inspect pre-existing staged work,
+preserve unrelated changes, and ask if the index cannot be separated
+unambiguously. Report the commit and remaining state. Do not push.
+```
+
+**Expect:** Only the authorized files in the commit, with other work preserved. [Full examples](skills/git-tooling/examples.md).
+
+</details>
+
+<details>
+<summary><strong>Trim mode: add an accessible search clear action</strong></summary>
+
+**Use case:** A small interaction needs a complete fix without another dependency or state layer.
+
+```text
+Use trim-mode. Add a clear action to ProductSearch using the existing
+button primitive. Clearing should restore all results and keep focus
+in the input. Preserve accessible naming, verify the behavior, and
+keep the implementation and response small.
+```
+
+**Expect:** Existing primitives, correct focus and results, retained safeguards, and a concise handoff. [Full examples](skills/trim-mode/examples.md).
+
+</details>
+
+<details>
+<summary><strong>UI design direction: make inventory exceptions actionable</strong></summary>
+
+**Use case:** A decorative opening pushes the actual work below the first viewport.
+
+```text
+Use ui-design-direction to redesign the inventory workspace around
+low-stock exceptions and restock actions. Preserve the brand,
+navigation, and component library. Define responsive behavior and
+loading, empty, failure, and retry states. Implement the agreed scope
+and inspect the rendered layout and main path where tools permit.
+```
+
+**Expect:** A product-specific hierarchy, usable states, and separate visual and task-completion evidence. [Full examples](skills/ui-design-direction/examples.md).
+
+</details>
+
+<details>
+<summary><strong>React component practices: fix stale results and item identity</strong></summary>
+
+**Use case:** Copied result state and index keys break search updates and reordering.
+
+```text
+Use react-component-practices to fix ProjectResults. Derive visible
+items from the current projects and query without duplicated state,
+use stable project IDs, and preserve the existing matching contract,
+public props, and empty state. Verify query and ordering changes.
+```
+
+**Expect:** One clear state owner, current results, stable identity, and focused checks. [Full examples](skills/react-component-practices/examples.md).
+
+</details>
+
+<details>
+<summary><strong>Vitest + React Testing Library: cover rejection and retry</strong></summary>
+
+**Use case:** A save form needs behavior coverage that catches lost drafts.
+
+```text
+Use vitest-react-testing to test RenameForm. Edit the project name,
+submit, reject the save, and assert the error and retained draft.
+Retry successfully and verify the exact callback value. Use real
+controls, accessible queries, awaited user-event, and controlled
+promises. Keep production code unchanged.
+```
+
+**Expect:** Deterministic public-behavior tests, with executed results distinguished from generated files. [Full examples](skills/vitest-react-testing/examples.md).
+
+</details>
+
+<details>
+<summary><strong>React accessibility: repair dialog keyboard behavior</strong></summary>
+
+**Use case:** A dialog opens visually but leaves focus behind or loses it on closing.
+
+```text
+Use react-accessibility to repair the checkout delivery dialog with
+the existing accessible primitive. Verify naming, initial focus,
+containment, dismissal, restoration, and long-content visibility.
+Preserve checkout behavior. Report browser and assistive-technology
+checks that were run and those still unverified.
+```
+
+**Expect:** A usable real interaction, accurate semantics, and evidence appropriate to the claim. [Full examples](skills/react-accessibility/examples.md).
+
+</details>
+
+<details>
+<summary><strong>Design system consistency: align a one-off settings action</strong></summary>
+
+**Use case:** A screen bypasses the canonical control with a custom palette and spacing.
+
+```text
+Use design-system-consistency to align the settings save action with
+ActionButton and active semantic tokens. Preserve submission, focus,
+disabled, and error behavior. Check supported themes. Keep the change
+local and do not alter shared defaults or add another button system.
+```
+
+**Expect:** Reuse of current components and tokens without a global visual migration. [Full examples](skills/design-system-consistency/examples.md).
+
+</details>
+
+<details>
+<summary><strong>React UI performance: diagnose slow filtering with evidence</strong></summary>
+
+**Use case:** A large inventory feels slow, and the bottleneck has not yet been established.
+
+```text
+Use react-ui-performance to investigate slow inventory filtering with
+representative data. Record comparable runtime conditions and identify
+the dominant cost before editing. Make the narrowest justified change,
+preserve matching and selection, and repeat the measurement. Label any
+unmeasured hypothesis; do not blanket-memoize the application.
+```
+
+**Expect:** A supported diagnosis and honest before-and-after evidence, with correctness preserved. [Full examples](skills/react-ui-performance/examples.md).
+
+</details>
+
+<details>
+<summary><strong>Component API design: make field ownership explicit</strong></summary>
+
+**Use case:** A shared field mixes controlled and uncontrolled behavior and loses valid empty strings.
+
+```text
+Use component-api-design to review TextField and its consumers. Define
+valid controlled and uncontrolled modes, preserve controlled empty
+strings, callback arguments, and native attributes. Ask about reset
+behavior and compatibility before changing callers. Add only the API
+surface needed by current use cases.
+```
+
+**Expect:** A clear ownership contract, explicit compatibility impact, and representative consumer checks. [Full examples](skills/component-api-design/examples.md).
+
+</details>
+
+## Agent role examples
+
+These are role-based prompts for ordinary sessions using installed skills. Native specialist profiles and automatic delegation are not implemented. Naming a role does not create an independent execution context or change permissions.
+
+| Role and use case | Copyable starting prompt | Expected handoff |
+| --- | --- | --- |
+| [UI architect](docs/agent-use-cases.md#ui-architect): plan a workspace before implementation | `Act as a UI architect. Use ui-design-direction and component-api-design to plan the inventory layout, responsive states, and public contracts. Preserve brand and current primitives; do not edit code.` | Concrete design and API decisions, reuse choices, and unresolved questions |
+| [React builder](docs/agent-use-cases.md#react-builder): implement an approved slice | `Act as a React builder. Use harness, react-component-practices, and design-system-consistency to implement the approved inventory plan with recovery states. Run relevant checks and keep the diff scoped.` | Complete accepted behavior, changed files, actual checks, and limits |
+| [Test engineer](docs/agent-use-cases.md#test-engineer): protect a save interaction | `Act as a test engineer. Use vitest-react-testing to cover pending save, rejection, retained draft, and retry with real controls and controlled promises. Do not change production code.` | Behavior tests, their protected contract, and observed execution results |
+| [UI reviewer](docs/agent-use-cases.md#ui-reviewer): assess the rendered result | `Act as a UI reviewer. Use ui-design-direction and react-accessibility to inspect hierarchy, reading, keyboard behavior, focus, and recovery without editing. Separate evidence from assumptions.` | Ranked findings with location, impact, evidence, correction, and coverage limits |
+| [Performance auditor](docs/agent-use-cases.md#performance-auditor): find the slow path | `Act as a performance auditor. Use react-ui-performance to reproduce the filter delay, distinguish browser and request costs, and recommend a measured correction. Keep the investigation read-only.` | Supported bottleneck, baseline, recommendation, tradeoffs, and validation plan |
+| [Git operator](docs/agent-use-cases.md#git-operator): commit approved files safely | `Act as a Git operator. Use git-tooling to commit only the named fix and test with the agreed message, preserving unrelated staged and unstaged work. Do not push or rewrite history.` | Intended commit, preserved user work, and accurate repository state |
+
+See [complete agent use cases](docs/agent-use-cases.md) for required inputs, detailed prompts, review boundaries, and a team handoff example. Use only the roles the task needs; a small fix does not need a team of agents.
 
 ## An operating model teams can review
 

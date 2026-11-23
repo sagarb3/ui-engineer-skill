@@ -1,6 +1,6 @@
 # Installation and Activation
 
-Skills are instruction packages, not runtime dependencies. Install only the skills your team needs and copy each complete folder, including its guides, reference index, and UI metadata.
+Skills are instruction packages, not runtime dependencies. Install only the skills your team needs and copy each complete folder, including its guides, reference index, `examples.md`, and UI metadata. Each example file contains two practical scenarios with prompts, expected deliverables, and verification; skill UI metadata includes a concrete starting prompt.
 
 ## GitHub Copilot CLI
 

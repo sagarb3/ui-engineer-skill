@@ -102,6 +102,10 @@ Read only the guides relevant to the current task. All guides are included in th
 
 The [reference index](references.json) is a machine-readable map of these local files. It is a collection convention, not a client configuration or an instruction to load every guide.
 
+## Examples
+
+See [worked use cases and copyable prompts](examples.md) for two application scenarios, expected deliverables, and verification. Paths and outcomes are illustrative; adapt them to the actual project and report only checks that ran.
+
 ## Anti-patterns / Red Flags
 
 - Magic values where a fitting token exists, raw palette colors for semantic roles, and duplicated primitives.

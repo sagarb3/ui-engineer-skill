@@ -1,4 +1,4 @@
 interface:
   display_name: "Component API Design"
   short_description: "Clear component contracts and compatible consumers"
-  default_prompt: "Use $component-api-design to handle the requested task using project conventions and relevant verification."
+  default_prompt: "Use $component-api-design to define a text field ownership contract, preserve valid empty strings and native attributes, and clarify reset behavior before changing consumers."

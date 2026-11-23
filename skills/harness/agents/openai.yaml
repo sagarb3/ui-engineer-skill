@@ -1,4 +1,4 @@
 interface:
   display_name: "Harness"
   short_description: "Small complete changes with clear task boundaries"
-  default_prompt: "Use $harness to handle the requested task using project conventions and relevant verification."
+  default_prompt: "Use $harness to repair a form that clears its draft after a rejected save, preserving the draft, retry behavior, existing architecture, and focused regression coverage."

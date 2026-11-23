@@ -1,4 +1,4 @@
 interface:
   display_name: "React UI Performance"
   short_description: "Measured React bottlenecks and targeted improvements"
-  default_prompt: "Use $react-ui-performance to handle the requested task using project conventions and relevant verification."
+  default_prompt: "Use $react-ui-performance to diagnose slow filtering with representative data, identify the measured bottleneck, preserve correctness, and compare equivalent before-and-after conditions."

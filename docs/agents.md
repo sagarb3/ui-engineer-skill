@@ -8,6 +8,12 @@ Every skill includes `agents/openai.yaml` with its display name, short descripti
 
 The reference indexes and evaluation cases describe content and verification. Neither is a runtime orchestration configuration. The evaluation tool prepares local workspaces and records reviewer judgments; it does not create model sessions.
 
+## Practical Role Examples
+
+See [agent role use cases](agent-use-cases.md) for six detailed examples: UI architect, React builder, test engineer, UI reviewer, performance auditor, and Git operator. Each includes inputs, a copyable role prompt, an expected handoff, and a review boundary.
+
+These examples work as role instructions in an ordinary session with the named skills installed. They are not claims that native specialist profiles exist. Each skill also includes its own `examples.md` with two worked scenarios, and its UI metadata supplies a task-specific starting prompt.
+
 ## Reusable Specialist Profiles
 
 Native agent profiles define a role, appropriate tasks, expected inputs, process, output contract, and scope boundaries. They can be selected explicitly, and some hosts also use them for delegation. The host determines discovery, context isolation, tool availability, and permissions.

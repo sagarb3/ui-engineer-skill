@@ -1,4 +1,4 @@
 interface:
   display_name: "Trim Mode"
   short_description: "Minimal complete changes and action-first replies"
-  default_prompt: "Use $trim-mode to handle the requested task using project conventions and relevant verification."
+  default_prompt: "Use $trim-mode to add an accessible clear action to an existing search field, preserve focus, reuse current primitives, and verify the affected behavior without a new dependency."

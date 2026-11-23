@@ -117,6 +117,10 @@ Record concrete defects: "At narrow width, the filter row pushes the results out
 
 State the implemented hierarchy and responsive behavior, the screens and states actually checked, and any missing browser verification. Do not claim visual or accessibility approval from code inspection alone. Stop after the requested design outcome; do not add an unrequested design-system migration.
 
+## Examples
+
+See [worked use cases and copyable prompts](examples.md) for two application scenarios, expected deliverables, and verification. Paths and outcomes are illustrative; adapt them to the actual project and report only checks that ran.
+
 ## Anti-patterns / Red Flags
 
 - Arbitrary gradients, decorative clutter, excessive motion, and low-contrast secondary text.

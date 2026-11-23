@@ -1,4 +1,4 @@
 interface:
   display_name: "React Component Practices"
   short_description: "Clear React state, effects, identity, and lifecycle"
-  default_prompt: "Use $react-component-practices to handle the requested task using project conventions and relevant verification."
+  default_prompt: "Use $react-component-practices to fix a result list with stale derived state and unstable keys while preserving its matching contract and public props."

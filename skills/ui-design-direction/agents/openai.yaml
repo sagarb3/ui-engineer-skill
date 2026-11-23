@@ -1,4 +1,4 @@
 interface:
   display_name: "UI Design Direction"
   short_description: "Product-focused UI direction and browser review"
-  default_prompt: "Use $ui-design-direction to handle the requested task using project conventions and relevant verification."
+  default_prompt: "Use $ui-design-direction to redesign an inventory workspace around low-stock exceptions, existing brand rules, responsive behavior, recovery states, and rendered verification."

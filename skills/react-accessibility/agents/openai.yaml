@@ -1,4 +1,4 @@
 interface:
   display_name: "React Accessibility"
   short_description: "Semantic controls, keyboard focus, and honest audits"
-  default_prompt: "Use $react-accessibility to handle the requested task using project conventions and relevant verification."
+  default_prompt: "Use $react-accessibility to repair a dialog using existing primitives, verify naming and keyboard focus, and report browser or assistive-technology checks that remain unverified."
